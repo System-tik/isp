@@ -39,5 +39,12 @@ class VSysteme extends Component
         $valide=system::find($this->selectId);
         $valide->delete();
     }
+    public function update(){
+        $record=$this->validate([
+            'libelle'=>'required',
+        ]);
+        $valide=system::find($this->selectId);
+        $valide->update($record);
+    }
 
 }
