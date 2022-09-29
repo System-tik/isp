@@ -1,8 +1,6 @@
 <template>
-    <div class="w-full h-32 py-12 bg-gray-500">
-        <div class="text-center">
-            <h1 class="text-center text-white text-3xl font-serif font-bold">Modalites d'admission</h1>
-        </div>
+    <div class="w-full h-14 py-2 bg-gray-400">
+        <h1 class="px-52 text-white text-3xl font-serif font-bold">Inscription</h1>
     </div>
 
     <div class="px-52">
@@ -58,14 +56,14 @@
         </div>
     </div>
 
-    <div class="bg-gray-500">
+    <div class="bg-gray-400">
         <div class="flex text-lg px-52 gap-10">
             <div class="basis-2/5 mt-32">
                 <img src="/img/learn.png" alt="" srcset="">
             </div>
 
             <div class="basis-3/5 mb-6">
-                <h1 class="text-3xl text-center text-white py-6 font-serif font-bold">Formulaire d'enregistrement</h1>
+                <h1 class="text-3xl text-white py-6 font-serif font-bold">Formulaire d'enregistrement</h1>
                 <div class="flex gap-2 text-sm">
                     <div class="">
                         <label for="" class="text-white block">Prenom <span class="text-red-600">*</span></label>

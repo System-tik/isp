@@ -1,6 +1,8 @@
 <template>
+    <div class="w-full h-14 py-2 bg-gray-400">
+        <h1 class="px-52 text-white text-3xl font-serif font-bold">Actualites</h1>
+    </div>
     <div class="px-52">
-        <h1 class="text-center mt-4 text-blue-900 text-3xl font-serif">Actualités</h1>
         <!-- Actu content -->
         <div class="flex items-center justify-center gap-8 mt-8">
             <div class="">
