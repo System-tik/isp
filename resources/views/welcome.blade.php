@@ -7,8 +7,14 @@
         <title>Laravel</title>
         @vite('resources/css/app.css')
         @vite('resources/js/app.js')
+
+        @livewireStyles()
     </head>
     <body>
         <div id="app"></div>
+
+
+
+        @livewireScripts()
     </body>
 </html>

@@ -1,5 +1,5 @@
 <template>
-    <div class="p-5 text-white bg-black">
+    <div class="p-5 bg-black text-white">
         <router-link  to="/">Home</router-link>
         <router-link to="/actualite">Actualite</router-link>
         <router-link to="/inscription">Inscription</router-link>
