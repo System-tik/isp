@@ -1,7 +1,7 @@
 <template>
     <div class="flex items-center justify-between px-4 py-3 sm:px-8 md:px-16 lg:px-32 xl:px-64 2xl:px-80">
-        <div>
-            <img src="/img/logo.jpeg" alt="" class="w-16">
+        <div class="pt-2">
+            <img src="/img/logo2.jpeg" alt="" class="w-16">
         </div>
         <div class="md:hidden">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
