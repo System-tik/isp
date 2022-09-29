@@ -16,7 +16,7 @@
                         Sint quam placeat quidem laudantium minus consequuntur quisquam odit ullam. 
                         Voluptatem error placeat voluptates, accusantium tempore sit iure voluptas.
                     </p>
-                    <h5 class="text-sm font-bold mt-2 cursor-pointer">Lire la suite &rarr;</h5>
+                    <h5 class="text-sm font-bold mt-2">Lire la suite &rarr;</h5>
                 </div>
             </div>
             <div class="">
@@ -33,7 +33,7 @@
                         Voluptatem error placeat voluptates, accusantium tempore sit iure voluptas.
                     </p>
                 </div>
-                <h5 class="text-sm font-bold mt-2 cursor-pointer">Lire la suite &rarr;</h5>
+                <h5 class="text-sm font-bold mt-2">Lire la suite &rarr;</h5>
             </div>
         </div>
     </div>
