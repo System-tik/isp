@@ -8,7 +8,7 @@
     @livewireStyles
 </head>
 <body>
-    <livewire:admin.v-systeme>
+    <livewire:admin.v-semestre>
 
 @livewireScripts
 </body>

@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class departement extends Model
 {
     use HasFactory;
+    protected $fillable = ['nomdep','idsec'];
 }
