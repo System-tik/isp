@@ -1,7 +1,7 @@
 <template>
     <div class="px-52">
         <h1 class="text-center mt-4 text-blue-900 text-3xl font-serif">Actualités</h1>
-
+        <!-- Actu content -->
         <div class="flex items-center justify-center gap-8 mt-8">
             <div class="">
                 <div class="">
