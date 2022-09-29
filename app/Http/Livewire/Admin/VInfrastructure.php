@@ -67,7 +67,7 @@ class VInfrastructure extends Component
             $record = insfrastruct::find($this->selectedId);
             $record->update($validate);
             $this->clear();
-            $this->dispatchBrowserEvent('confirm', ['message' => 'infrastructure enregistré!']);
+            $this->dispatchBrowserEvent('confirm', ['message' => 'infrastructure modifié!']);
             $this->emit('insfractruct');
         } catch (\Throwable $th) {
             $this->dispatchBrowserEvent('echec',['message' => $th->getMessage()]);
@@ -81,7 +81,7 @@ class VInfrastructure extends Component
             $record = insfrastruct::find($this->selectedId);
             $record->delete();
             $this->clear();
-            $this->dispatchBrowserEvent('confirm', ['message' => 'insfrastructure enregistré!']);
+            $this->dispatchBrowserEvent('confirm', ['message' => 'insfrastructure suprimé!']);
             $this->emit('insfrastruct');
         } catch (\Throwable $th) {
             $this->dispatchBrowserEvent('echec',['message' => $th->getMessage()]);

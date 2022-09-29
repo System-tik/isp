@@ -15,7 +15,7 @@ class VSemestre extends Component
     protected $messages = [
         'system.required' => 'Veuillez indiquer le système.',
         'niveau.required' => 'Veuillez indiquer le niveau.',
-        'selectedId' => 'Veuillez séléctionner une un semestre.'
+        'selectedId' => 'Veuillez séléctionner un semestre.'
     ];
     public function render()
     {
