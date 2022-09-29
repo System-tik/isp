@@ -1,7 +1,10 @@
-import './bootstrap';
+import { createApp } from "vue"
 
-import Alpine from 'alpinejs';
+import App from './App.vue';
+import axios from 'axios';
+import router from './router';
 
-window.Alpine = Alpine;
-
-Alpine.start();
+const app = createApp(App)
+app.config.globalProperties.$axiox = axios
+app.use(router)
+app.mount('#app')
