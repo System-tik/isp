@@ -6,6 +6,7 @@ import Inscription from '../pages/Inscription.vue';
 import Programme from '../pages/Programme.vue';
 import Frais from '../pages/Frais.vue';
 import About from '../pages/About.vue';
+import DetailsActu from '../pages/DetailsActu.vue'
 
 const routes = [
     {
@@ -37,6 +38,11 @@ const routes = [
         name : 'About',
         path : '/about',
         component : About
+    },
+    {
+        name : 'DetailsActu',
+        path : '/DetailsActu',
+        component : DetailsActu
     }  
 ];
 
