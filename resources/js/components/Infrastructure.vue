@@ -1,5 +1,5 @@
 <template>
-    <div class="px-4 py-5 lg:px-32 sm:px-8 md:px-16 xl:px-64 2xl:px-80">
+    <div class="px-4 py-5 lg:px-32 sm:px-8 md:px-16 xl:px-64 2xl:px-80 bg-slate-50">
         <div class="lg:px-44 md:px-24 xl:px-52 2xl:px-64 ">
             <div class="py-2 text-center text-blue-800 xl:text-lg 2xl:text-2xl">
                 Infrastructure

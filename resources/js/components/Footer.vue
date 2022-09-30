@@ -1,18 +1,18 @@
 <template>
-    <div class="flex flex-col items-center justify-center gap-5 px-4 py-10 bg-gray-300 md:py-20 sm:gap-32 sm:flex-row sm:px-8 md:px-16 lg:px-32 xl:px-64 2xl:px-80">
-        <div class="text-sm text-black lg:text-md">
-            <h1 class="py-1 font-bold text-md lg:text-lg xl:text-xl">
+    <div class="flex flex-col items-center justify-center gap-5 px-4 py-10 bg-gray-900 md:py-20 sm:gap-32 sm:flex-row sm:px-8 md:px-16 lg:px-32 xl:px-64 2xl:px-80">
+        <div class="text-sm text-white lg:text-md ">
+            <h1 class="py-1 font-bold text-center sm:text-left ms:justify-start text-md lg:text-lg xl:text-xl">
                 CONTACT
             </h1>
-            <p>
+            <p class="text-center sm:text-left">
                 (+243)0024300243
             </p>
-            <a href="#" class="">
+            <a href="#" class="text-center sm:text-left">
                 Ispmbanzangungu@gmail.com
             </a>
         </div>
-        <div class="pl-4 text-black sm:pl-0">
-            <h1 class="py-1 font-bold text-md lg:text-lg xl:text-xl">
+        <div class="pl-4 text-white sm:pl-0 ">
+            <h1 class="py-1 font-bold text-center sm:text-left text-md lg:text-lg xl:text-xl">
                 RESEAUX SOCIAUX
             </h1>
             <div class="flex gap-2">
@@ -51,9 +51,9 @@
             </div>
         </div>
     </div>
-    <div class="flex justify-center text-white bg-gray-400">
+    <div class="flex justify-center pt-1 text-white bg-gray-900 border-t border-gray-700">
         <p class="font-bold ">
-            &#xA9; 2022 ISP MBANZA-NGUNGU  by Systematik
+            &#xA9; 2022 ISP MBANZA-NGUNGU.  Développé par Systematik
         </p>
     </div>
 </template>
