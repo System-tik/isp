@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class insfrastruct extends Model
 {
     use HasFactory;
+    protected $fillable = ['nombatiment','descrip']; 
 }

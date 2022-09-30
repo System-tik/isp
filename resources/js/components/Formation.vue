@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col items-center gap-10 px-4 py-10 sm:px-8 md:px-16 lg:px-32 xl:px-64 2xl:px-80">
+    <div class="flex flex-col items-center gap-10 px-4 py-10 sm:px-8 md:px-16 lg:px-32 xl:px-64 2xl:px-80" >
         <div class="lg:px-44 md:px-24 xl:px-52 2xl:px-64 ">
             <div class="text-center text-blue-800 xl:text-lg 2xl:text-2xl">
                 Des formations multiple a votre disposition

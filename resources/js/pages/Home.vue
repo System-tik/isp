@@ -1,11 +1,11 @@
 <template>
     <div>
-        <Nav/>
+        
         <Header/>
         <About/>
         <Formation/>
         <Infrastructure/>
-        <Footer/>
+        
 
     </div>
 </template>
