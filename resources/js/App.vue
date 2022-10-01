@@ -7,9 +7,13 @@
         <router-link to="/programme">Programme</router-link>
         <router-link to="/about">About</router-link>
     </div> -->
-    <Nav/>    
-    <router-view></router-view>
-    <Footer/>
+    <div class="flex flex-col justify-between">
+        <div class="flex-1">
+            <Nav/>    
+            <router-view></router-view>
+        </div>
+        <Footer/>
+    </div>
 </template>
 <script>
     import Nav from './components/Nav.vue';

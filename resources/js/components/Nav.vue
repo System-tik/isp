@@ -19,10 +19,12 @@
 
             <div class="dropdown">
                 <p>Inscription</p>
-                <div class="dropdown-content">
-                    <div class="flex flex-col gap-2 text-base">
-                        <router-link to="/inscription" class="">Inscription</router-link>
-                        <router-link to="/inscription" class="">Inscription</router-link>
+                <div class=" dropdown-content">
+                    <div class="py-2"></div>
+                    <div class="flex flex-col w-56 gap-2 px-0 text-base bg-gray-50">
+                        <router-link to="/inscription" class="px-4 py-2 transition duration-500 transform border-b hover:bg-blue-600 hover:text-white">Admission</router-link>
+                        <router-link to="/frais" class="px-4 py-2 transition duration-500 transform border-b hover:bg-blue-600 hover:text-white">Frais academiques</router-link>
+                        <router-link to="/programme" class="px-4 py-2 transition duration-500 transform border-b hover:bg-blue-600 hover:text-white">Programme des cours</router-link>
                     </div>
                 </div>
             </div> 
