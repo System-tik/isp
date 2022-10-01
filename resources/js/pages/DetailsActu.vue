@@ -1,26 +1,40 @@
 <template>
-    <div class="w-full h-44 py-10" style="background-color:#45aaf2">
-        <div class="text-center">
-            <p class="text-white text-sm">Event</p>
-            <h1 class="text-center text-white text-3xl font-serif">La rentree academique</h1>
+    <div class="h-38" style="background-color:#f4f6ff;">
+        <div class="flex flex-col w-full items-center justify-center py-6 mt-20">
+            <div class="">
+                <span class="text-sm">
+                    <router-link to="/" class="underline hover:text-blue-600">Accueil</router-link>
+                    <span> / <router-link to="/Actualite" class="underline hover:text-blue-600">Actualités</router-link></span>
+                    <span> / Détails de l'actualité</span>
+                </span>
+            </div>
+            <div class="mt-3">
+                <h1 class="text-3xl font-bold text-gray-900">La rentrée académique</h1>
+            </div>
         </div>
-        <h5 class="text-xs px-52 text-white mt-8">Par ISP/MBANZA-NGUNGU | 29/09/2022</h5>
+        <div class="px-64 py-2 font-medium items-start justify-start">
+            <h5 class="text-xs text-gray-900">Par ISP/MBANZA-NGUNGU | 29/09/2022</h5>
+        </div>
     </div>
-    <div class="px-52">
+    
+    <div class="px-64 mb-10">
         <div class="px-28 mt-5">
             <img src="/img/img1.jpeg" alt="" class="w-full h-80 rounded-md">
-            <p class="text-justify py-5">
+            <p class="text-justify py-5 text-gray-700 mt-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus officia architecto, eaque rem sit facere iusto
+                doloribus excepturi.
+                Dolorem, maiores! Quae, optio. Minima voluptatum, quis beatae quaerat optio ipsa explicabo.
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus officia architecto, eaque rem sit facere iusto
                 doloribus excepturi.
                 Dolorem, maiores! Quae, optio. Minima voluptatum, quis beatae quaerat optio ipsa explicabo.
             </p>
-            <h5 class="text-sm font-bold">&larr; Précédent</h5>
+            <router-link to="/Actualite" class="hover:text-blue-600 text-sm font-bold">&larr; Précédent</router-link>
         </div>
     </div>
 
-    <div class="bg-gray-50 h-64">
-        <div class="px-52 py-6">
-            <h1 class="text-xl font-serif">A lire egalement</h1>
+    <div class="bg-gray-50 mb-10">
+        <div class="px-52 py-8">
+            <h1 class="text-xl font-semibold text-gray-900">A lire également</h1>
         </div>
         <div class="flex items-center justify-center gap-8 py-2 px-52">
             <div class="">
@@ -29,14 +43,14 @@
                 </div>
                 <div>
                     <p class="text-blue-900 text-sm">Event</p>
-                    <h4 class="text-xl font-bold">La rentree academique</h4>
+                    <h4 class="text-xl font-bold">La rentrée académique</h4>
                     <span class="text-xs">Par ISP/MBANZA-NGUNGU | 29/09/2022</span>
                     <p class="text-sm mt-2 text-justify font-thin">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, blanditiis fuga.
                         Sint quam placeat quidem laudantium minus consequuntur quisquam odit ullam.
                         Voluptatem error placeat voluptates, accusantium tempore sit iure voluptas.
                     </p>
-                    <h5 class="text-sm font-bold mt-2">Lire la suite &rarr;</h5>
+                    <router-link to="/DetailsActu" class="text-sm font-bold mt-2 hover:text-blue-600">Lire la suite &rarr;</router-link>
                 </div>
             </div>
             <div class="">
@@ -45,7 +59,7 @@
                 </div>
                 <div>
                     <p class="text-blue-900 text-sm">Event</p>
-                    <h4 class="text-xl font-bold">La rentree academique</h4>
+                    <h4 class="text-xl font-bold">La rentrée académique</h4>
                     <span class="text-xs">Par ISP/MBANZA-NGUNGU | 29/09/2022</span>
                     <p class="text-sm mt-2 text-justify font-thin">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, blanditiis fuga.
@@ -53,7 +67,7 @@
                         Voluptatem error placeat voluptates, accusantium tempore sit iure voluptas.
                     </p>
                 </div>
-                <h5 class="text-sm font-bold mt-2">Lire la suite &rarr;</h5>
+                <router-link to="/DetailsActu" class="text-sm font-bold mt-2 hover:text-blue-600">Lire la suite &rarr;</router-link>
             </div>
             <div class="">
                 <div class="">
@@ -61,7 +75,7 @@
                 </div>
                 <div>
                     <p class="text-blue-900 text-sm">Event</p>
-                    <h4 class="text-xl font-bold">La rentree academique</h4>
+                    <h4 class="text-xl font-bold">La rentrée académique</h4>
                     <span class="text-xs">Par ISP/MBANZA-NGUNGU | 29/09/2022</span>
                     <p class="text-sm mt-2 text-justify font-thin">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, blanditiis fuga.
@@ -69,7 +83,7 @@
                         Voluptatem error placeat voluptates, accusantium tempore sit iure voluptas.
                     </p>
                 </div>
-                <h5 class="text-sm font-bold mt-2">Lire la suite &rarr;</h5>
+                <router-link to="/DetailsActu" class="text-sm font-bold mt-2 hover:text-blue-600">Lire la suite &rarr;</router-link>
             </div>
         </div>
     </div>

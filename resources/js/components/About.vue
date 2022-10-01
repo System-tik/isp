@@ -8,7 +8,7 @@
                 ISP MBANZA-NGUNGU
             </div>
             <div class="font-bold text-gray-800 xl:text-lg 2xl:text-xl">
-                Institut superieurs et pedagogiaue
+                Institut superieurs et pedagogique
             </div>
             <div class="text-justify text-gray-700 ">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum deleniti laborum at voluptatem neque aspernatur unde doloremque temporibus minima? Eius dignissimos quibusdam sapiente quae architecto fuga ab atque provident blanditiis? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error, inventore facilis? Iste eius vero, hic rerum placeat cumque? Recusandae quas sapiente molestiae accusamus quidem corporis cumque aspernatur ipsum harum mollitia!

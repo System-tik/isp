@@ -18,6 +18,7 @@
 
 
             <div class="dropdown">
+<<<<<<< HEAD
                 <p>Inscription</p>
                 <div class=" dropdown-content">
                     <div class="py-2"></div>
@@ -25,6 +26,14 @@
                         <router-link to="/inscription" class="px-4 py-2 transition duration-500 transform border-b hover:bg-blue-600 hover:text-white">Admission</router-link>
                         <router-link to="/frais" class="px-4 py-2 transition duration-500 transform border-b hover:bg-blue-600 hover:text-white">Frais academiques</router-link>
                         <router-link to="/programme" class="px-4 py-2 transition duration-500 transform border-b hover:bg-blue-600 hover:text-white">Programme des cours</router-link>
+=======
+                <p class="hover:cursor-pointer">Inscription</p>
+                <div class="dropdown-content">
+                    <div class="flex flex-col gap-2">
+                        <router-link to="/inscription" class="hover:bg-blue-600 hover:text-white hover:rounded hover:px-4">Inscription</router-link>
+                        <hr>
+                        <router-link to="/inscription" class="text-sm hover:bg-blue-600 hover:text-white hover:rounded hover:px-4">Programme des cours</router-link>
+>>>>>>> c0b84b4694412f9d61c4d2b1963387035fa524cf
                     </div>
                 </div>
             </div> 

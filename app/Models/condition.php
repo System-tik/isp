@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class condition extends Model
 {
+  
+    protected $fillable=['descrip'];
     use HasFactory;
 }

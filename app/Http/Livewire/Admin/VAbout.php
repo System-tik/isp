@@ -24,6 +24,7 @@ class VAbout extends Component
             'titre'=>'required',
             'descrip'=>'required'
         ]);
+        
         about::create($record);
         $this->clear();
     }
