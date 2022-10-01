@@ -1,5 +1,5 @@
 <template>
-    <div class="absolute top-0 flex items-center justify-between w-screen px-4 py-3 bg-transparent sm:px-8 md:px-16 lg:px-32 xl:px-64 2xl:px-80" style=" z-index:1000;">
+    <div class="absolute top-0 flex items-center justify-between w-screen px-4 py-3 bg-transparent sm:px-8 md:px-16 lg:px-32 xl:px-40 2xl:px-80" style=" z-index:1000;">
         <div class="pt-2">
             <img src="/img/logo2.jpeg" alt="" class="w-16">
         </div>

@@ -15,7 +15,7 @@
         }">
             <SplideSlide>
                 <div class="flex items-center justify-center bg-cover md:h-screen " style="background-image:url('img/bg/isp-fond.svg'); background-color: #f3f6ff;">
-                    <div class="h-full gap-5 px-4 py-10 bg-cover md:grid-cols-2 sm:px-8 md:grid lg:gap-14 xl:gap-20 md:px-16 lg:px-32 xl:px-64 2xl:px-80" >
+                    <div class="h-full gap-5 px-4 py-10 bg-cover md:grid-cols-2 sm:px-8 md:grid lg:gap-14 xl:gap-20 md:px-16 lg:px-32 xl:px-40 2xl:px-80" >
                         <div class="flex flex-col justify-center gap-5 py-20">
                             <div class="text-center text-gray-500 xl:text-2xl 2xl:text-3xl md:text-left">
                                 BIENVENUE !
@@ -40,7 +40,7 @@
             </SplideSlide>
             <SplideSlide>
                 <div class="flex items-center justify-center bg-cover md:h-screen " style="background-image:url('img/bg/isp-fond.svg'); background-color: #f3f6ff;">
-                    <div class="h-full gap-5 px-4 py-10 bg-cover md:grid-cols-2 sm:px-8 md:grid lg:gap-14 xl:gap-20 md:px-16 lg:px-32 xl:px-64 2xl:px-80" >
+                    <div class="h-full gap-5 px-4 py-10 bg-cover md:grid-cols-2 sm:px-8 md:grid lg:gap-14 xl:gap-20 md:px-16 lg:px-32 xl:px-40 2xl:px-80" >
                         <div class="flex flex-col justify-center gap-5 py-20">
                             <div class="text-center text-gray-500 xl:text-2xl 2xl:text-3xl md:text-left">
                                 BIENVENUE !
