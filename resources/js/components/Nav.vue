@@ -18,11 +18,12 @@
 
 
             <div class="dropdown">
-                <p>Inscription</p>
+                <p class="hover:cursor-pointer">Inscription</p>
                 <div class="dropdown-content">
-                    <div class="flex flex-col gap-2 text-base">
-                        <router-link to="/inscription" class="">Inscription</router-link>
-                        <router-link to="/inscription" class="">Inscription</router-link>
+                    <div class="flex flex-col gap-2">
+                        <router-link to="/inscription" class="hover:bg-blue-600 hover:text-white hover:rounded hover:px-4">Inscription</router-link>
+                        <hr>
+                        <router-link to="/inscription" class="text-sm hover:bg-blue-600 hover:text-white hover:rounded hover:px-4">Programme des cours</router-link>
                     </div>
                 </div>
             </div> 
