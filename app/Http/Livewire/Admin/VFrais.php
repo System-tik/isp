@@ -2,8 +2,9 @@
 
 namespace App\Http\Livewire\Admin;
 
-use Livewire\Component;
 use App\Models\frais;
+use Livewire\Component;
+
 
 class VFrais extends Component
 {

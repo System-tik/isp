@@ -8,7 +8,11 @@
     @livewireStyles
 </head>
 <body>
+<<<<<<< HEAD
     <livewire:admin.v-frais>
+=======
+    <livewire:admin.v-option>
+>>>>>>> 923c6d82289a2e489d10d661787e60bf0363d471
 
 @livewireScripts
 </body>
