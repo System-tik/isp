@@ -11,9 +11,9 @@
     </div>
 
     <!-- Modalites -->
-    <div class="px-64">
-        <div class="flex gap-5 text-gray-800">
-            <div class="text-sm basis-3/5 py-7">
+    <div class="px-4 lg:px-32 sm:px-8 md:px-16 xl:px-40 2xl:px-80">
+        <div class="grid grid-cols-6 text-gray-800">
+            <div class="col-span-6 text-sm text-justify lg:col-span-4 py-7">
                 <h1 class="mb-4 font-serif text-2xl text-blue-900">Les modalites d'admission</h1>
                 <div class="px-4">
                     <p>
@@ -62,23 +62,23 @@
             </div>
 
             <!-- img -->
-            <div class="basis-2/5 py-7">
-                <img src="img/etu2.jpg" alt="" class="w-full border" style="height:470px">
+            <div class="hidden col-span-1 col-start-6 lg:flex py-7">
+                <img src="img/etu2.png" alt="" class="w-full border " style="height:280px">
             </div>
         </div>
     </div>
 
     <!-- Formulaire d'inscription -->
-    <div class="px-64" style="background-color:#f4f6ff;">
+    <div class="px-4 lg:px-32 sm:px-8 md:px-16 xl:px-40 2xl:px-80" style="background-color:#f4f6ff;">
         <div class="flex gap-10 text-lg">
-            <div class="mt-32 basis-2/5">
+            <div class="items-center hidden py-0 md:flex basis-2/5">
                 <img src="/img/learn.png" alt="" srcset="">
             </div>
 
-            <div class="mt-4 mb-10 basis-3/5">
+            <div class="w-full mt-4 mb-10 md:basis-3/5">
                 <h1 class="py-2 text-3xl font-bold text-gray-900">Formulaire d'inscription</h1>
                 <p class="mb-5 text-sm">Passez dès maintenant à l'action et inscrivez-vous en remplissant le formulaire suivant :</p>
-                <div class="p-4 border border-gray-400 rounded">
+                <div class="">
                     <div class="flex gap-4 text-sm text-gray-900">
                         <div class="basis-1/2">
                             <label for="" class="block">Prenom <span class="text-red-600">*</span></label>
