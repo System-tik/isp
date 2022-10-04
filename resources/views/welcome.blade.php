@@ -12,7 +12,7 @@
 
         @livewireStyles()
         <style>
-            .dropdown {
+           .dropdown {
               position: relative;
               display: inline-block;
             }
@@ -30,7 +30,8 @@
             .dropdown:hover .dropdown-content {
               display: block;
             }
-            </style>
+           
+        </style>
     </head>
     <body>
         <div id="app"></div>
@@ -38,6 +39,6 @@
 
 
         @livewireScripts()
-        
+        <script></script>
     </body>
 </html>

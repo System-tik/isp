@@ -3,8 +3,7 @@
         
         <Splide :options="{ 
             type: 'fade',
-            rewind: true,
-            
+            rewind: true, 
             autoplay: true,
             interval: 2000,
             speed: 1000,
@@ -47,7 +46,7 @@
                             </div>
                             
                             <div class="font-bold text-gray-800 lg:text-2xl xl:text-4xl ">
-                                L'éducation est un puissant moteur<br> du développement
+                                L'éducation est un puissant moteur<br> du développement 
                             </div>
                             <div class="py-10">
                                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi, ipsum cumque, ut aperiam rep</p>
