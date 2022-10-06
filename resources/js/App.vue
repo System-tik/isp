@@ -7,7 +7,7 @@
         <router-link to="/programme">Programme</router-link>
         <router-link to="/about">About</router-link>
     </div> -->
-    <Nav/>    
+    <Nav/>
     <router-view></router-view>
     <Footer/>
 </template>
