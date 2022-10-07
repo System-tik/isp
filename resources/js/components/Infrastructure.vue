@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   
         <div class="px-4 py-5 lg:px-32 sm:px-8 md:px-16 xl:px-64 2xl:px-80 bg-slate-50">
             <div class="lg:px-44 md:px-24 xl:px-52 2xl:px-64 ">
@@ -8,6 +9,15 @@
                 <div class="pb-10 text-sm text-center text-gray-500 ">
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                 </div>
+=======
+    <div class="px-4 py-5 lg:px-32 sm:px-8 md:px-16 xl:px-40 2xl:px-80 bg-slate-50">
+        <div class="lg:px-44 md:px-24 xl:px-52 2xl:px-64 ">
+            <div class="py-2 text-center text-blue-800 xl:text-lg 2xl:text-2xl">
+                Infrastructure
+            </div>
+            <div class="pb-10 text-sm text-center text-gray-500 ">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+>>>>>>> 6a3c67277219c3a932b373c80c3b5c0b66ca6dc5
             </div>
             <div >
                 <Splide  :options="{

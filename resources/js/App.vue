@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
     <div>
         <!-- <div class="p-5 text-white bg-black">
             <router-link  to="/">Home</router-link>
@@ -14,6 +15,22 @@
     
         <Footer/>
         <button id="retour" @click="Top()" class="fixed bottom-5 right-2 bg-gray-900 p-2 text-white animate__animated animate__bounce">Top</button>
+=======
+    <!-- <div class="p-5 text-white bg-black">
+        <router-link  to="/">Home</router-link>
+        <router-link to="/actualite">Actualite</router-link>
+        <router-link to="/inscription">Inscription</router-link>
+        <router-link to="/frais">Frais</router-link>
+        <router-link to="/programme">Programme</router-link>
+        <router-link to="/about">About</router-link>
+    </div> -->
+    <div class="flex flex-col justify-between">
+        <div class="flex-1">
+            <Nav/>    
+            <router-view></router-view>
+        </div>
+        <Footer/>
+>>>>>>> 6a3c67277219c3a932b373c80c3b5c0b66ca6dc5
     </div>
 </template>
 <script>

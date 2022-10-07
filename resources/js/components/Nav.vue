@@ -1,5 +1,5 @@
 <template>
-    <div class="absolute top-0 flex items-center justify-between w-screen px-4 py-3 bg-transparent sm:px-8 md:px-16 lg:px-32 xl:px-64 2xl:px-80" style=" z-index:1000;">
+    <div class="absolute top-0 flex items-center justify-between w-screen px-4 py-3 bg-transparent sm:px-8 md:px-16 lg:px-32 xl:px-40 2xl:px-80" style=" z-index:1000;">
         <div class="pt-2">
             <img src="/img/logo2.jpeg" alt="" class="w-16">
         </div>
@@ -67,10 +67,12 @@
 
             <div class="dropdown">
                 <p>Inscription</p>
-                <div class="dropdown-content">
-                    <div class="flex flex-col gap-2 text-base">
-                        <router-link to="/inscription" class="">Inscription</router-link>
-                        <router-link to="/inscription" class="">Inscription</router-link>
+                <div class=" dropdown-content">
+                    <div class="py-2"></div>
+                    <div class="flex flex-col w-56 gap-2 px-0 text-base bg-gray-50">
+                        <router-link to="/inscription" class="px-4 py-2 transition duration-500 transform border-b hover:bg-blue-600 hover:text-white">Admission</router-link>
+                        <router-link to="/frais" class="px-4 py-2 transition duration-500 transform border-b hover:bg-blue-600 hover:text-white">Frais academiques</router-link>
+                        <router-link to="/programme" class="px-4 py-2 transition duration-500 transform border-b hover:bg-blue-600 hover:text-white">Programme des cours</router-link>
                     </div>
                 </div>
             </div> 
