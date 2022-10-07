@@ -33,8 +33,11 @@
                     <div class="col-span-6 text-xs text-gray-600 sm:text-lg">
                         LICENCE (LMD)
                     </div>
-                    <div class="col-span-6 text-xs text-gray-600 sm:text-lg">
-                        PREMIERE LICENCE (L1)
+                    <div class="flex col-span-6 gap-4 text-xs text-gray-600 sm:text-lg">
+                        <span class="font-bold  decoration-inherit">PREMIERE LICENCE (L1)</span>
+                        <span class="font-bold decoration-inherit">DEUXIEME LICENCE (L2)</span>
+                        <span class="font-bold decoration-inherit">TROISIEME LICENCE(L3)</span>
+                        <span class="font-bold decoration-inherit">QUATRIEME LICENCE (L4)</span>
                     </div>
                 </div>
             </div>

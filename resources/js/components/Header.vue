@@ -6,7 +6,7 @@
             rewind: true,
             
             autoplay: true,
-            interval: 2000,
+            interval: 4000,
             speed: 1000,
             arrows: true,
             pagination: true,
