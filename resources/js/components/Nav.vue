@@ -8,27 +8,24 @@
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
             <transition name="custom-classes"
-            enter-active-class="animate__animated  animate__fadeInLeft"
+            enter-active-class="animate__animated animate__fadeInLeft"
             leave-active-class="animate__animated animate__slideOutRight">
 
-                <div v-if="voir" class=" bg-gray-900 w-screen fixed left-0 top-0 h-screen">
-                    <div class="flex justify-end items-center text-white px-2 text-2xl border-b">
-                        <span class="animate__animated  animate__rotateIn" @click="voir =false" >X</span>
+                <div v-if="voir" class="fixed top-0 left-0 w-screen h-screen bg-gray-900 ">
+                    <div class="flex items-center justify-end px-2 text-2xl text-white border-b">
+                        <span class="animate__animated animate__rotateIn" @click="voir =false" >X</span>
                     </div>
     
-                    <div class=" flex flex-col gap-1 text-xl text-gray-300">
+                    <div class="flex flex-col gap-1 text-xl text-gray-300 ">
                         <div class="px-5 py-2 border-b border-gray-800">
                             <router-link  to="/">Accueil</router-link>
                         </div>
-                        <div class="px-5 py-2 border-b border-gray-800">
-                            <router-link to="/about">Apropos de l'ISP</router-link>
-                        </div>
-    
-    
+                       
+                     
                         <div class="px-5 py-2 border-b border-gray-800" @click="etat=!etat">
                             <p>Inscription</p>
                             <transition name="custom-classes"
-                            enter-active-class="animate__animated  animate__fadeInLeft"
+                            enter-active-class="animate__animated animate__fadeInLeft"
                             leave-active-class="animate__animated animate__bounceOutRight">
                                 <div class=""  v-if="etat">
                                     <div class="flex flex-col gap-2 text-base">
@@ -60,11 +57,17 @@
             <div>
                 <router-link  to="/">Accueil</router-link>
             </div>
-            <div>
-                <router-link to="/about">Apropos de l'ISP</router-link>
-            </div>
-
-
+            <div class="dropdown">
+                <p>A propos de l'ISP</p>
+                <div class=" dropdown-content">
+                    <div class="py-2"></div>
+                    <div class="flex flex-col w-56 gap-2 px-0 text-base bg-gray-50">
+                        <router-link to="/about" class="px-4 py-2 transition duration-500 transform border-b hover:bg-blue-600 hover:text-white">Presentation ISP</router-link>
+                        <router-link to="/texteLegaux" class="px-4 py-2 transition duration-500 transform border-b hover:bg-blue-600 hover:text-white">Textes legaux</router-link>
+                    </div>
+                </div>
+            </div> 
+              
             <div class="dropdown">
                 <p>Inscription</p>
                 <div class=" dropdown-content">
