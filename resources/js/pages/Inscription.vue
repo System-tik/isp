@@ -69,7 +69,6 @@
     </div>
 
     <!-- Formulaire d'inscription -->
-<<<<<<< HEAD
     <div class="px-4 lg:px-32 sm:px-8 md:px-16 xl:px-40 2xl:px-80" style="background-color:#f4f6ff;">
         <div class="flex gap-10 text-lg">
             <div class="items-center hidden py-0 md:flex basis-2/5">
@@ -81,19 +80,6 @@
                 <p class="mb-5 text-sm">Passez dès maintenant à l'action et inscrivez-vous en remplissant le formulaire suivant :</p>
                 <div class="">
                     <div class="flex gap-4 text-sm text-gray-900">
-=======
-    <div class="px-64" style="background-color:#f4f6ff;">
-        <div class="flex gap-10 text-lg">
-            <div class="mt-32 basis-2/5">
-                <img src="/img/learn.png" alt="" srcset="">
-            </div>
-
-            <div class="mt-4 mb-10 basis-3/5">
-                <h1 class="py-2 text-3xl font-bold text-gray-900">Formulaire d'inscription</h1>
-                <p class="mb-5 text-sm">Passez dès maintenant à l'action et inscrivez-vous en remplissant le formulaire suivant :</p>
-                <div class="p-4 border border-gray-400 rounded">
-                    <div class="flex gap-4 text-sm text-gray-900">
->>>>>>> 78401d21b90a24ef918b03c58a4a7696b859f149
                         <div class="basis-1/2">
                             <label for="" class="block">Prenom <span class="text-red-600">*</span></label>
                             <input type="text" class="w-full h-8 px-4 text-xs text-gray-700 rounded bg-gray-50" placeholder="Prenom">
