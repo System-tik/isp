@@ -1,10 +1,10 @@
 <template>
-    <div class="absolute top-0 flex items-center justify-between w-screen px-4 py-3 bg-transparent sm:px-8 md:px-16 lg:px-32 xl:px-40 2xl:px-80" style=" z-index:1000;">
+    <div class="absolute top-0 flex items-center justify-between w-screen px-4 py-3 bg-transparent sm:px-8 md:px-16 lg:px-32 xl:px-64 2xl:px-80" style=" z-index:1000;">
         <div class="pt-2">
             <img src="/img/logo2.jpeg" alt="" class="w-16">
         </div>
         <div class="md:hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8"  @click="voir=true">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
             <transition name="custom-classes"
@@ -69,13 +69,12 @@
             </div> 
               
             <div class="dropdown">
-                <p>Inscription</p>
-                <div class=" dropdown-content">
-                    <div class="py-2"></div>
-                    <div class="flex flex-col w-56 gap-2 px-0 text-base bg-gray-50">
-                        <router-link to="/inscription" class="px-4 py-2 transition duration-500 transform border-b hover:bg-blue-600 hover:text-white">Admission</router-link>
-                        <router-link to="/frais" class="px-4 py-2 transition duration-500 transform border-b hover:bg-blue-600 hover:text-white">Frais academiques</router-link>
-                        <router-link to="/programme" class="px-4 py-2 transition duration-500 transform border-b hover:bg-blue-600 hover:text-white">Programme des cours</router-link>
+                <p class="hover:cursor-pointer">Inscription</p>
+                <div class="dropdown-content">
+                    <div class="flex flex-col gap-2">
+                        <router-link to="/inscription" class="hover:bg-blue-600 hover:text-white hover:rounded hover:px-4">Inscription</router-link>
+                        <hr>
+                        <router-link to="/inscription" class="text-sm hover:bg-blue-600 hover:text-white hover:rounded hover:px-4">Programme des cours</router-link>
                     </div>
                 </div>
             </div> 
@@ -95,13 +94,3 @@
         </div> 
     </div>
 </template>
-<script>
-export default {
-    data() {
-        return {
-            voir : false,
-            etat : false
-        }
-    },
-}
-</script>

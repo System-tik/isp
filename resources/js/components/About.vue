@@ -1,5 +1,5 @@
 <template>
-    <div class="gap-10 px-4 py-10 md:py-20 lg:flex sm:px-8 md:px-16 lg:px-32 xl:px-40 2xl:px-80 lg:py-40 bg-gray-50">
+    <div class="gap-10 px-4 py-10 md:py-20 lg:flex sm:px-8 md:px-16 lg:px-32 xl:px-64 2xl:px-80 lg:py-40 bg-gray-50">
         <div class="">
             <img src="/img/ab.png" alt="" class="h-full">
         </div>

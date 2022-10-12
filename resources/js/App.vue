@@ -24,30 +24,7 @@
         components:{
             Nav,
             Footer
-        },
-        methods: {
-            Top(){
-                // let btn = document.getElementById('retour');
-               window.scroll({
-                top:0,
-                behavior : 'smooth'
-               })
-            },
-           
-
         }
-
+    
     }
-    document.addEventListener("DOMContentLoaded", function (event) {
-        
-        var btn = document.getElementById('retour');
-        btn.classList.add('hidden');
-        window.addEventListener('scroll',()=>{
-            if(document.documentElement.scrollTop > 60 || document.body.scrollTop>60){
-                btn.classList.remove('hidden')
-            } else{
-                btn.classList.add('hidden')
-            }
-        })
-    });
     </script>
