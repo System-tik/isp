@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <link rel="apple-touch-icon" sizes="76x76" href="./build/dash/assets/img/apple-icon.png" />
-        {{-- <link rel="icon" type="image/png" href="./build/dash/assets/img/favicon.png" /> --}}
+        <link rel="apple-touch-icon" sizes="76x76" href="./dash/assets/img/apple-icon.png" />
+        {{-- <link rel="icon" type="image/png" href="./dash/assets/img/favicon.png" /> --}}
         <title>{{ config('app.name', 'ISP admin') }}</title>
         <!--     Fonts and icons     -->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
@@ -14,13 +14,13 @@
         
         <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
         <!-- Nucleo Icons -->
-        <link rel="stylesheet" href="{{asset('build/dash/assets/css/nucleo-icons.css')}}">
-        <link rel="stylesheet" href="{{asset('build/dash/assets/css/nucleo-svg.css')}}">
+        <link rel="stylesheet" href="{{asset('dash/assets/css/nucleo-icons.css')}}">
+        <link rel="stylesheet" href="{{asset('dash/assets/css/nucleo-svg.css')}}">
         <!-- Popper -->
         <script src="https://unpkg.com/@popperjs/core@2"></script>
-        <script defer src="{{asset('build/dash/alpinejs.cdn.min.js')}}"></script>
+        <script defer src="{{asset('dash/alpinejs.cdn.min.js')}}"></script>
         <!-- Main Styling -->
-        <link rel="stylesheet" href="{{asset('build/dash/assets/css/argon-dashboard-tailwind.css?v=1.0.1')}}">
+        <link rel="stylesheet" href="{{asset('dash/assets/css/argon-dashboard-tailwind.css?v=1.0.1')}}">
         
 
         <!-- Fonts -->
@@ -63,8 +63,8 @@
             <div class="h-19">
                 <i class="absolute top-0 right-0 p-4 opacity-50 cursor-pointer fas fa-times dark:text-white text-slate-400 xl:hidden" sidenav-close></i>
                 <a class="block px-8 py-6 m-0 text-sm whitespace-nowrap dark:text-white text-slate-700" href="#" target="_blank">
-                    <img src="./build/dash/assets/img/logo-ct-dark.png" class="inline h-full max-w-full transition-all duration-200 dark:hidden ease-nav-brand max-h-8" alt="main_logo" />
-                    <img src="./build/dash/assets/img/logo-ct.png" class="hidden h-full max-w-full transition-all duration-200 dark:inline ease-nav-brand max-h-8" alt="main_logo" />
+                    <img src="./dash/assets/img/logo-ct-dark.png" class="inline h-full max-w-full transition-all duration-200 dark:hidden ease-nav-brand max-h-8" alt="main_logo" />
+                    <img src="./dash/assets/img/logo-ct.png" class="hidden h-full max-w-full transition-all duration-200 dark:inline ease-nav-brand max-h-8" alt="main_logo" />
                     <span class="ml-1 font-semibold transition-all duration-200 ease-nav-brand">ISP Dashboard</span>
                 </a>
             </div>
@@ -119,7 +119,7 @@
                     </li>
 
                     <li class="mt-0.5 w-full">
-                        <a class=" dark:text-white dark:opacity-80 py-2.7 text-sm ease-nav-brand my-0 mx-2 flex items-center whitespace-nowrap px-4 transition-colors" href="./build/dash/pages/profile.html">
+                        <a class=" dark:text-white dark:opacity-80 py-2.7 text-sm ease-nav-brand my-0 mx-2 flex items-center whitespace-nowrap px-4 transition-colors" href="./dash/pages/profile.html">
                         <div class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
                             <i class="relative top-0 text-sm leading-normal text-slate-700 ni ni-single-02"></i>
                         </div>
@@ -167,7 +167,7 @@
                                 <a class="inline-block px-8 py-2 mb-0 mr-4 text-xs font-bold text-center text-blue-500 uppercase align-middle transition-all ease-in bg-transparent border border-blue-500 border-solid rounded-lg shadow-none cursor-pointer leading-pro hover:-translate-y-px active:shadow-xs hover:border-blue-500 active:bg-blue-500 active:hover:text-blue-500 hover:text-blue-500 tracking-tight-rem hover:bg-transparent hover:opacity-75 hover:shadow-none active:text-white active:hover:bg-transparent" target="_blank" href="https://www.creative-tim.com/builder/soft-ui?ref=navbar-dashboard&amp;_ga=2.76518741.1192788655.1647724933-1242940210.1644448053">Online Builder</a>
                             </li> -->
                             {{--  <li class="flex items-center">
-                                <a href="./build/dash/pages/sign-in.html" class="block px-0 py-2 text-sm font-semibold text-white transition-all ease-nav-brand">
+                                <a href="./dash/pages/sign-in.html" class="block px-0 py-2 text-sm font-semibold text-white transition-all ease-nav-brand">
                                 <i class="fa fa-user sm:mr-1"></i>
                                 <span class="hidden sm:inline">Sign In</span>
                                 </a>
@@ -202,7 +202,7 @@
                                         <a class="dark:hover:bg-slate-900 ease py-1.2 clear-both block w-full whitespace-nowrap rounded-lg bg-transparent px-4 duration-300 hover:bg-gray-200 hover:text-slate-700 lg:transition-colors" href="javascript:;">
                                         <div class="flex py-1">
                                             <div class="my-auto">
-                                                <img src="./build/dash/assets/img/team-2.jpg" class="inline-flex items-center justify-center mr-4 text-sm text-white h-9 w-9 max-w-none rounded-xl" />
+                                                <img src="./dash/assets/img/team-2.jpg" class="inline-flex items-center justify-center mr-4 text-sm text-white h-9 w-9 max-w-none rounded-xl" />
                                             </div>
                                             <div class="flex flex-col justify-center">
                                                 <h6 class="mb-1 text-sm font-normal leading-normal dark:text-white"><span class="font-semibold">New message</span> from Laur</h6>
@@ -219,7 +219,7 @@
                                         <a class="dark:hover:bg-slate-900 ease py-1.2 clear-both block w-full whitespace-nowrap rounded-lg px-4 transition-colors duration-300 hover:bg-gray-200 hover:text-slate-700" href="javascript:;">
                                             <div class="flex py-1">
                                                 <div class="my-auto">
-                                                    <img src="./build/dash/assets/img/small-logos/logo-spotify.svg" class="inline-flex items-center justify-center mr-4 text-sm text-white bg-gradient-to-tl from-zinc-800 to-zinc-700 dark:bg-gradient-to-tl dark:from-slate-750 dark:to-gray-850 h-9 w-9 max-w-none rounded-xl" />
+                                                    <img src="./dash/assets/img/small-logos/logo-spotify.svg" class="inline-flex items-center justify-center mr-4 text-sm text-white bg-gradient-to-tl from-zinc-800 to-zinc-700 dark:bg-gradient-to-tl dark:from-slate-750 dark:to-gray-850 h-9 w-9 max-w-none rounded-xl" />
                                                 </div>
                                                 <div class="flex flex-col justify-center">
                                                     <h6 class="mb-1 text-sm font-normal leading-normal dark:text-white"><span class="font-semibold">New album</span> by Travis Scott</h6>
@@ -270,9 +270,9 @@
             <!-- end Navbar -->
 
             {{-- Main menu --}}
-            {{-- <livewire:admin.v-dash> --}}
+            <livewire:admin.v-dash>
             {{-- <livewire:admin.v-condition-ad  x-show="menu[1]">--}}
-            <livewire:admin.v-about  x-show="menu[2]">
+            {{-- <livewire:admin.v-about  x-show="menu[2]"> --}}
             
             
 
@@ -352,9 +352,9 @@
         </div>
     </body>
     <!-- plugin for charts  -->
-    <script src="{{asset('build/dash/assets/js/plugins/chartjs.min.js')}}" async></script>
+    <script src="{{asset('dash/assets/js/plugins/chartjs.min.js')}}" async></script>
     <!-- plugin for scrollbar  -->
-    <script src="{{asset('build/dash/assets/js/plugins/perfect-scrollbar.min.js')}}" async></script>
+    <script src="{{asset('dash/assets/js/plugins/perfect-scrollbar.min.js')}}" async></script>
     <!-- main script file  -->
-    <script src="{{asset('build/dash/assets/js/argon-dashboard-tailwind.js?v=1.0.1')}}" async></script>
+    <script src="{{asset('dash/assets/js/argon-dashboard-tailwind.js?v=1.0.1')}}" async></script>
 </html>
