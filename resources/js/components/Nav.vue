@@ -30,8 +30,8 @@
                                 <div class=""  v-if="etat">
                                     <div class="flex flex-col gap-2 text-base">
                                         <router-link to="/inscription" class="">Admission</router-link>
-                                        <router-link to="/inscription" class="">Frais</router-link>
-                                        <router-link to="/inscription" class="">Programme de cours</router-link>
+                                        <router-link to="/frais" class="">Frais</router-link>
+                                        <router-link to="/programme" class="">Programme de cours</router-link>
                                     </div>
                                 </div>
                             </transition>
@@ -72,9 +72,11 @@
                 <p class="hover:cursor-pointer">Inscription</p>
                 <div class="dropdown-content">
                     <div class="flex flex-col gap-2">
+                        <!-- <router-link to="/inscription" class="">Admission</router-link> -->
                         <router-link to="/inscription" class="hover:bg-blue-600 hover:text-white hover:rounded hover:px-4">Inscription</router-link>
                         <hr>
-                        <router-link to="/inscription" class="text-sm hover:bg-blue-600 hover:text-white hover:rounded hover:px-4">Programme des cours</router-link>
+                        <router-link to="/frais" class="hover:bg-blue-600 hover:text-white hover:rounded hover:px-4">Frais</router-link>
+                        <router-link to="/programme" class="text-sm hover:bg-blue-600 hover:text-white hover:rounded hover:px-4">Programme des cours</router-link>
                     </div>
                 </div>
             </div> 
