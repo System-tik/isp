@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Admin;
 
 use App\Models\departement;
+use App\Models\section;
 use Livewire\Component;
 
 class VDepartement extends Component
@@ -14,6 +15,7 @@ class VDepartement extends Component
 
     public function render()
     {
+        $this->section = section::all();
         $this->departements = departement::all();
         return view('livewire.admin.v-departement');
 

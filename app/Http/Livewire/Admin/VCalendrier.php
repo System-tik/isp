@@ -40,8 +40,8 @@ class VCalendrier extends Component
         $this->selectId = $data["id"];
         $this->activite = $data["activite"];
         $this->descrip = $data['descrip'];
-        $this->activite = $data["debut"];
-        $this->descrip = $data['fin']; 
+        $this->debut = $data["debut"];
+        $this->fin = $data['fin']; 
     }
 
     public function update(){
