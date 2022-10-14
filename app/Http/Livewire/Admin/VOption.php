@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Admin;
 
 use App\Models\option;
+use App\Models\departement;
 use Livewire\Component;
 
 class VOption extends Component
@@ -11,6 +12,7 @@ class VOption extends Component
     public $iddep;
     public $selectedId;
     public $options;
+    public $departements;
 
     protected $messages = [
         'nomopt.required' => 'Veuillez indiquer l\'option.',
@@ -21,6 +23,7 @@ class VOption extends Component
     public function render()
     {
         $this->options = option::all();
+        $this->departements = departement::all();
         return view('livewire.admin.v-option');
     }
 

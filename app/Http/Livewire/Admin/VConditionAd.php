@@ -15,11 +15,13 @@ class VConditionAd extends Component
     {
         $this->conditions=condition::all();
         return view('livewire.admin.v-condition-ad');
+        
     }
     public function store(){
         $record=$this->validate([
             'descrip'=>'required',
         ]);
+        /* dd($record); */
         condition::create($record);
         $this->clear();
 
