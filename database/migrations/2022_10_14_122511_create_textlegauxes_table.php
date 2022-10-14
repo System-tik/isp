@@ -13,13 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('frais', function (Blueprint $table) {
+        Schema::create('textlegauxes', function (Blueprint $table) {
             $table->id();
-            $table->string('type');
-            $table->double('montant');
-            $table->integer('niveau_id');
-            $table->integer('system_id');
-            $table->integer('type');
+            $table->string('titre');
+            $table->text('descrip');
             $table->timestamps();
         });
     }
@@ -31,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('frais');
+        Schema::dropIfExists('textlegauxes');
     }
 };

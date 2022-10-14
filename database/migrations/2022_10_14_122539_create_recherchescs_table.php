@@ -13,13 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('frais', function (Blueprint $table) {
+        Schema::create('recherchescs', function (Blueprint $table) {
             $table->id();
-            $table->string('type');
-            $table->double('montant');
-            $table->integer('niveau_id');
-            $table->integer('system_id');
-            $table->integer('type');
+            $table->string('titre');
+            $table->text('descrip');
+            $table->string('type');//memoire ou articles
             $table->timestamps();
         });
     }
@@ -31,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('frais');
+        Schema::dropIfExists('recherchescs');
     }
 };

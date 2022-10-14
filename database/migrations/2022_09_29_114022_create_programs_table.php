@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('idoption');
             $table->string('nomCours');
             $table->string('descrip');
+            $table->integer('credit');
             $table->timestamps();
         });
     }

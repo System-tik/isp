@@ -16,7 +16,7 @@
             <SplideSlide>
                 <div class="flex items-center justify-center h-screen bg-cover " style="background-image:url('img/bg/isp-fond.svg'); background-color: #f3f6ff;">
                     <div class="hidden h-full grid-cols-2 gap-5 px-4 py-10 bg-cover sm:px-8 md:grid lg:gap-14 xl:gap-20 md:px-16 lg:px-32 xl:px-64 2xl:px-80" >
-                        <div class="flex flex-col justify-center gap-5 py-20">
+                        <div class="flex flex-col justify-center gap-5 py-20" >
                             <div class="text-gray-500 xl:text-2xl 2xl:text-3xl ">
                                 BIENVENUE !
                             </div>

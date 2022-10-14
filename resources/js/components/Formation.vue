@@ -8,29 +8,29 @@
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi ab consectetur mollitia atque aliquam id ratione Lorem ipsum dolor sit amet consectetur, adipisici
             </div>
         </div>
-        <div class="flex flex-col items-center gap-1" >
-            <div class="grid grid-cols-1 gap-1 sm:grid-cols-2 md:grid-cols-3">
-                <div>
+        <div class="flex flex-col items-center gap-1" data-aos="flip-down">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3" >
+                <div >
                     <FormationCards/>
                 </div>
-                <div>
+                <div >
                     <FormationCards/>
                 </div>
-                <div class="hidden md:grid">
+                <div >
                     <FormationCards/>
                 </div>
+                <div >
+                    <FormationCards/>
+                </div>
+                <div >
+                    <FormationCards/>
+                </div>
+                <div >
+                    <FormationCards/>
+                </div>
+              
             </div>
-            <div class="grid grid-cols-1 gap-1 sm:grid-cols-2 md:grid-cols-3">
-                <div>
-                    <FormationCards/>
-                </div>
-                <div class="hidden sm:grid">
-                    <FormationCards/>
-                </div>
-                <div class="hidden md:grid">
-                    <FormationCards/>
-                </div>
-            </div>
+           
         </div>
     </div>
 </template>

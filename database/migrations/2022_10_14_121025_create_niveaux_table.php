@@ -13,13 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('frais', function (Blueprint $table) {
+        Schema::create('niveaux', function (Blueprint $table) {
             $table->id();
-            $table->string('type');
-            $table->double('montant');
-            $table->integer('niveau_id');
+            $table->string('lib');
             $table->integer('system_id');
-            $table->integer('type');
             $table->timestamps();
         });
     }
@@ -31,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('frais');
+        Schema::dropIfExists('niveaux');
     }
 };
