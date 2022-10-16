@@ -3,11 +3,13 @@
 namespace App\Http\Livewire\Admin;
 
 use App\Models\program;
+use App\Models\option;
 use Livewire\Component;
 
 class VProgramme extends Component
 {
     public $idoption;
+    public $options;
     public $nomCours;
     public $descrip;
     public $selectedId;
@@ -23,6 +25,7 @@ class VProgramme extends Component
     public function render()
     {
         $this->programmes = program::all();
+        $this->options = option::all();
         return view('livewire.admin.v-programme');
     }
 

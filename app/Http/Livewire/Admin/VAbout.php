@@ -47,7 +47,10 @@ class VAbout extends Component
         ]);
         $result=about::find($this->selectId);
         $result->update($record);
+
+        $this->clear();
     }
+
     public function delete(){
         $record=$this->validate([
             'titre'=>'required',
@@ -55,5 +58,7 @@ class VAbout extends Component
         ]);
         $result=about::find($this->selectId);
         $result->delete();
+
+        $this->clear();
     }
 }

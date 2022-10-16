@@ -6,6 +6,10 @@
     
             <div class="flex flex-col gap-5 py-5">
                 <div class="flex flex-col">
+                    <label for="" class="py-1">Titre</label>
+                    <input wire:model="titre" type="text" class="w-full border-gray-200 rounded">
+                </div>
+                <div class="flex flex-col">
                     <label for="" class="py-1">Description</label>
                     <textarea type="text" wire:model="descrip" class="w-full border-gray-200 rounded h-44"></textarea>
                 </div>
@@ -22,11 +26,13 @@
             <table class="w-full">
                 <tr class="flex w-full gap-6 py-3 border-b">
                     <th>Id</th>
+                    <th>Titre</th>
                     <th class="">Description</th>
                 </tr>
                 @foreach ($conditions as $i)
                 <tr wire:click="select({{$i}})" class="flex w-full gap-6 border-b cursor-pointer hover:bg-gray-50">
                     <td class="">{{ $i->id }}</td>
+                    <td class="">{{ $i->titre }}</td>
                     <td class="">{{ $i->descrip }}</td>
                 </tr>
                 @endforeach 

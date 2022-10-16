@@ -10,13 +10,12 @@
                     <input wire:model="nomdep" type="text" class="w-full border-gray-200 rounded">
                 </div>
                 <div class="flex flex-col">
-                    <label for="" class="py-1">Id section</label>
+                    <label for="" class="py-1">Section</label>
                     <select name="" id="" wire:model="idsec">
-                        @foreach ($section as $ids)
+                        @foreach ($sections as $ids)
                             <option  value="{{ $ids->id }}">{{ $ids->nomsec }}</option>
                         @endforeach
                     </select>
-                    {{-- <input wire:model="idsec" type="text" class="w-full border-gray-200 rounded"> --}}
                 </div>
     
                 <div class="grid grid-cols-2 gap-4 py-4">
@@ -36,10 +35,10 @@
                     <td class="flex-1">Section</td>
                 </tr>
                 @foreach ($departements as $i)
-                <tr wire:click="selectedId({{$i}})" class="flex w-full gap-4 border-b cursor-pointer hover:bg-gray-50">
+                <tr wire:click="selectedId({{$i}})" class="flex w-full gap-8 border-b cursor-pointer hover:bg-gray-50">
                     <td>{{ $i->id }}</td>
                     <td class="">{{ $i->nomdep }}</td>
-                    <td class="">{{ $ids->nomsec }}</td>
+                    <td class="">{{ $i->nomsec }}</td>
                 </tr>
                 @endforeach
             </table>

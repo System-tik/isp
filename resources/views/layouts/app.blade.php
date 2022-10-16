@@ -272,17 +272,18 @@
 
             {{-- Main menu --}}
             {{-- <livewire:admin.v-dash> --}}
-            {{-- <livewire:admin.v-condition-ad  x-show="menu[1]"> --}}
-            {{-- <livewire:admin.v-about  x-show="menu[2]"> --}}
-            {{-- <livewire:admin.v-calendrier> --}} {{-- Pas finit --}}
-            <livewire:admin.v-departement>
-            {{-- <livewire:admin.v-frais> --}}
-            {{-- <livewire:admin.v-infrastructure> --}}
-            {{-- <livewire:admin.v-option> --}}
-            {{-- <livewire:admin.v-programme> --}}
-            {{-- <livewire:admin.v-section>  --}}   
-            {{-- <livewire:admin.v-semestre> --}}
-            {{-- <livewire:admin.v-systeme> --}}
+            {{-- <livewire:admin.v-condition-ad  x-show="menu[1]"> --}} {{-- ok --}}
+            {{-- <livewire:admin.v-about  x-show="menu[2]"> --}} {{-- ok --}}
+            {{-- <livewire:admin.v-calendrier> --}} {{-- ok --}}
+            {{-- <livewire:admin.v-departement> --}} {{-- Pas finit --}}
+            {{-- <livewire:admin.v-frais> --}} {{-- Pas finit --}}
+            {{-- <livewire:admin.v-infrastructure> --}} {{-- ok --}}
+            <livewire:admin.v-option> {{-- Pas finit --}}
+            {{-- <livewire:admin.v-programme> --}} {{-- Pas finit --}}
+            {{-- <livewire:admin.v-section>  --}}  {{-- ok --}}
+            {{-- <livewire:admin.v-semestre> --}} {{-- Pas finit --}}
+            {{-- <livewire:admin.v-systeme> --}} {{-- ok --}}
+            {{-- <livewire:admin.v-niveau> --}} {{-- Pas finit --}}
             
             
 

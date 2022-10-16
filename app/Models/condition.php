@@ -8,6 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class condition extends Model
 {
   
-    protected $fillable=['descrip'];
+    protected $fillable=['descrip', 'titre'];
     use HasFactory;
 }

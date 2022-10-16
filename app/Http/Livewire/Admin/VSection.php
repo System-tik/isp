@@ -37,6 +37,7 @@ class VSection extends Component
             $this->dispatchBrowserEvent('echec',['message' => $th->getMessage()]);
         }
 
+        $this->clear();
     }
 
     public function clear()
@@ -67,6 +68,8 @@ class VSection extends Component
             $this->dispatchBrowserEvent('echec',['message' => $th->getMessage()]);
             
         }
+
+        $this->clear();
     }
 
     public function delete()
@@ -80,5 +83,7 @@ class VSection extends Component
         } catch (\Exception $th) {
             $this->dispatchBrowserEvent('echec',['message' => $th->getMessage()]);
         }
+
+        $this->clear();
     }
 }

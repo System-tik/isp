@@ -3,12 +3,14 @@
 namespace App\Http\Livewire\Admin;
 
 use App\Models\semestre;
+use App\Models\system;
+use App\Models\niveau;
 use Livewire\Component;
 
 class VSemestre extends Component
 {
-    public $system;
-    public $niveau;
+    public $systemes;
+    public $niveaux;
     public $selectedId;
     public $semestres;
 
@@ -20,6 +22,8 @@ class VSemestre extends Component
     public function render()
     {
         $this->semestres = semestre::all();
+        $this->systemes = system::all();
+        $this->niveaux = niveau::all();
         return view('livewire.admin.v-semestre');
     }
 

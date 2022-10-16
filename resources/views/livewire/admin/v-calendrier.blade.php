@@ -40,7 +40,7 @@
                     <td class="flex-1">Fin</td>
                 </tr>
                 @foreach ($calendriers as $i)
-                <tr wire:click="select({{$i}})" class="flex w-full gap-6 border-b cursor-pointer hover:bg-gray-50">
+                <tr wire:click="select({{$i}})" class="flex w-full gap-14 border-b cursor-pointer hover:bg-gray-50">
                     <td class="">{{ $i->id }}</td>
                     <td class="">{{ $i->activite }}</td>
                     <td class="">{{ $i->descrip }}</td>

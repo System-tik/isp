@@ -19,7 +19,6 @@ return new class extends Migration
             $table->double('montant');
             $table->integer('niveau_id');
             $table->integer('system_id');
-            $table->integer('type');
             $table->timestamps();
         });
     }
