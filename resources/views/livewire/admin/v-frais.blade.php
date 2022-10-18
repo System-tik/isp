@@ -12,6 +12,22 @@
                     <label for="" class="py-1">Montant</label>
                     <input wire:model="montant" type="text" class="w-full border-gray-200 rounded">
                 </div>
+                <div class="flex flex-col">
+                    <label for="" class="py-1">Niveau</label>
+                    <select name="" id="" wire:model="niveau_id">
+                        @foreach ($niveaux as $idn)
+                        <option value="{{ $idn->id }}">{{ $idn->lib }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="flex flex-col">
+                    <label for="" class="py-1">Semestre</label>
+                    <select name="" id="" wire:model="system_id">
+                        @foreach ($systemes as $ids)
+                        <option value="{{ $ids->id }}">{{ $ids->libelle }}</option>
+                        @endforeach
+                    </select>
+                </div>
     
                 <div class="grid grid-cols-2 gap-4 py-4">
                     <button wire:click="clear" class="px-2 text-lg text-white bg-gray-600">Clear</button>
@@ -27,13 +43,17 @@
                 <tr class="flex w-full gap-20 py-3 border-b">
                     <td>Id</td>
                     <td class="">Type</td>
-                    <td class="flex-1">Montant</td>
+                    <td class="">Montant</td>
+                    <td class="">Niveau</td>
+                    <td class="flex-1">Systeme</td>
                 </tr>
                 @foreach ($fraiss as $i)
                 <tr wire:click="select({{$i}})" class="flex w-full gap-20 border-b cursor-pointer hover:bg-gray-50">
                     <td class="">{{ $i->id }}</td>
                     <td class="">{{ $i->type }}</td>
-                    <td class="flex-1">{{ $i->montant }}</td>
+                    <td class="">{{ $i->montant }}</td>
+                    <td class="">{{ $idn->lib }}</td>
+                    <td class="">{{ $ids->libelle }}</td>
                 </tr>
                 @endforeach
             </table>

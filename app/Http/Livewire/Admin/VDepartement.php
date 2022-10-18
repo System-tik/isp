@@ -15,8 +15,8 @@ class VDepartement extends Component
 
     public function render()
     {
-        $this->section = section::all();
-        $this->departements = departement::all();
+        $this->sections = section::all();
+        $this->departements = departement::join('sections', 'sections.id', '=', 'departements.idsec')->get('*');
         return view('livewire.admin.v-departement');
 
     }
@@ -36,7 +36,6 @@ class VDepartement extends Component
         } catch (\Throwable $th) {
             $this->dispatchBrowserEvent('echec',['message' => $th->getMessage()]);
         }
-
     }
 
     public function clear()

@@ -4,13 +4,18 @@ namespace App\Http\Livewire\Admin;
 
 use App\Models\insfrastruct;
 use Livewire\Component;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Livewire\WithFileUploads;
 
 class VInfrastructure extends Component
 {
+    use WithFileUploads;
     public $nombatiment;
     public $descrip;
     public $selectedId;
     public $infrastructures;
+    public $photo;
 
     protected $messages = [
         'nombatiment.required' => 'Veuillez indiquer le nom.',
@@ -31,14 +36,19 @@ class VInfrastructure extends Component
             'descrip' => 'required'
         ]);
 
+        /* $ret = Storage::disk('local')->put('gallerie', $request->img);
+        die(); */
+    
         try {
             $record = insfrastruct::create($validate);
             $this->clear();
             $this->dispatchBrowserEvent('confirm', ['message' => 'infrastructure enregistré!']);
             $this->emit('infrastruct');
+            $this->photo->storePubliclyAs('public/gallerie/', $record->id.'.png');
         } catch (\Throwable $th) {
             $this->dispatchBrowserEvent('echec',['message' => $th->getMessage()]);
         }
+
 
     }
 

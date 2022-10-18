@@ -5,11 +5,11 @@
     
             <div class="flex flex-col gap-1 py-2">
                 <div class="flex flex-col">
-                    <label wire:model="nomopt" for="" class="py-1">Nom option</label>
+                    <label wire:model="nomopt" for="" class="py-1">Option</label>
                     <input type="text" class="w-full border-gray-200 rounded">
                 </div>
                 <div class="flex flex-col">
-                    <label for="" class="py-1">Id département</label>
+                    <label for="" class="py-1">Département</label>
                     <select name="" id="" wire:model="iddep">
                         @foreach ($departements as $idd)
                         <option value="{{ $idd->id }}">{{ $idd->nomdep }}</option>
@@ -32,14 +32,14 @@
             <table class="w-full">
                 <tr class="flex w-full gap-2 py-3 border-b">
                     <td>Id</td>
-                    <td class="">Nom option</td>
+                    <td class="">Option</td>
                     <td class="flex-1">Département</td>
                 </tr>
                 @foreach ($options as $i)
                 <tr wire:click="selectedId({{$i}})" class="flex w-full gap-6 border-b cursor-pointer hover:bg-gray-50">
                     <td>{{ $i->id }}</td>
                     <td class="">{{ $i->nomopt }}</td>
-                    <td class="">{{ $idd->nomdep }}</td>
+                    <td class="">{{ $i->nomdep }}</td>
                 </tr>
                 @endforeach
             </table>

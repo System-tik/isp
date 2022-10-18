@@ -22,8 +22,8 @@ class VOption extends Component
 
     public function render()
     {
-        $this->options = option::all();
         $this->departements = departement::all();
+        $this->options = option::join('departements', 'departements.id', '=', 'options.iddep')->get('*');
         return view('livewire.admin.v-option');
     }
 

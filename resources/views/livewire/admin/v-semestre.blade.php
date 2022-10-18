@@ -5,12 +5,24 @@
     
             <div class="flex flex-col gap-1 py-2">
                 <div class="flex flex-col">
-                    <label for="" class="py-1">Système</label>
+                    <label for="" class="py-1">Nom</label>
                     <input type="text" class="w-full border-gray-200 rounded">
                 </div>
                 <div class="flex flex-col">
+                    <label for="" class="py-1">Systeme</label>
+                    <select name="" id="" wire:model="idopt">
+                        @foreach ($systemes as $ids)
+                        <option value="{{ $ids->id }}">{{ $ids->libelle }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="flex flex-col">
                     <label for="" class="py-1">Niveau</label>
-                    <textarea type="text" class="w-full border-gray-200 rounded h-44"></textarea>
+                    <select name="" id="" wire:model="idopt">
+                        @foreach ($niveaux as $idn)
+                        <option value="{{ $idn->id }}">{{ $idn->lib }}</option>
+                        @endforeach
+                    </select>
                 </div>
     
                 <div class="grid grid-cols-2 gap-4 py-4">

@@ -53,6 +53,7 @@ class VCalendrier extends Component
         ]);
         $result=calendrier::find($this->selectId);
         $result->update($record);
+        $this->clear();
     }
     public function delete(){
         $record=$this->validate([
@@ -63,5 +64,6 @@ class VCalendrier extends Component
         ]);
         $result=calendrier::find($this->selectId);
         $result->delete();
+        $this->clear();
     }
 }
