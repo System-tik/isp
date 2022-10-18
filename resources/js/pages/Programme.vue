@@ -25,16 +25,24 @@
                     <div class="col-span-6 text-xs text-gray-600 sm:text-lg">
                         CYCLE
                     </div>
-                    <div class="col-span-6 text-xs text-gray-600 sm:text-lg">
-                        PROMOTION
+                    <div class="hidden col-span-6 text-xs text-gray-600 xl:grid sm:text-lg">
+                        PROMOTION 
+                    </div>
+                    <div class="grid col-span-6 text-xs text-gray-600 xl:hidden sm:text-lg">
+                        LICENCE (LMD)
+                    </div>
+                </div>
+                <div class="grid grid-cols-12 px-5 py-2 xl:hidden " style="background-color:#f4f6ff;">
+                    <div class="flex justify-center col-span-12 text-xs text-gray-600 sm:text-lg">
+                        PROMOTION 
                     </div>
                 </div>
                 <div class="grid grid-cols-12 px-5 py-2 " style="background-color:#f4f6ff;">
-                    <div class="col-span-6 text-xs text-gray-600 sm:text-lg">
+                    <div class="hidden col-span-6 text-xs text-gray-600 xl:grid sm:text-lg">
                         LICENCE (LMD)
                     </div>
-                    <div class="flex col-span-6 gap-4 text-xs text-gray-600 sm:text-lg">
-                        <span class="font-bold  decoration-inherit">PREMIERE LICENCE (L1)</span>
+                    <div class="flex col-span-12 gap-4 text-xs text-gray-600 xl:col-span-6 sm:text-lg">
+                        <span class="font-bold decoration-inherit">PREMIERE LICENCE (L1)</span>
                         <span class="font-bold decoration-inherit">DEUXIEME LICENCE (L2)</span>
                         <span class="font-bold decoration-inherit">TROISIEME LICENCE(L3)</span>
                         <span class="font-bold decoration-inherit">QUATRIEME LICENCE (L4)</span>
