@@ -1,6 +1,5 @@
 <template>
-  
-        <div class="px-4 py-5 lg:px-32 sm:px-8 md:px-16 xl:px-64 2xl:px-80 bg-slate-50">
+    <div class="px-4 py-5 lg:px-32 sm:px-8 md:px-16 xl:px-64 2xl:px-80 bg-slate-50">
             <div class="lg:px-44 md:px-24 xl:px-52 2xl:px-64 ">
                 <div class="py-2 text-center text-blue-800 xl:text-lg 2xl:text-2xl">
                     Infrastructure
@@ -9,16 +8,28 @@
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                 </div>
             </div>
-            <div >
-                
+            <div>
                 <Splide  :options="{
                     perPage:2,
                     rewind: true,
                     gap   : '1rem',
                     autoplay : true,
                     loop : true,
-                }" class="mb-5 flex justify-center md:flex-row flex-col"> 
+                }" class="mb-5 flex justify-center md:flex-row flex-col">
                     <SplideSlide>
+                        <div class="image" @click="VoirPhoto()">
+                            <img src="/img/deux.jpg" alt="" class="w-full h-72" id="photo1">
+                            <h1 class="text-lg text-center text-gray-500" id="photo2">Home</h1>
+                        </div>
+
+                    </SplideSlide> 
+                    <SplideSlide>
+                        <div class="image" @click="VoirPhoto()">
+                            <img src="/img/un.jpg" alt="" class="w-full h-72">
+                            <h1 class="text-lg text-center text-gray-500">Reception</h1>
+                        </div>
+                    </SplideSlide>                  
+                    <!-- <SplideSlide>
                         <div class="">
                             <img src="/img/deux.jpg" alt="" class="w-full h-72">
                             <h1 class="text-lg text-center text-gray-500">Home</h1>
@@ -29,27 +40,13 @@
                             <img src="/img/un.jpg" alt="" class="w-full h-72">
                             <h1 class="text-lg text-center text-gray-500">Reception</h1>
                         </div>
-                    </SplideSlide>                  
-                    <SplideSlide>
-                        <div class="">
-                            <img src="/img/deux.jpg" alt="" class="w-full h-72">
-                            <h1 class="text-lg text-center text-gray-500">Home</h1>
-                        </div>
-                    </SplideSlide> 
-                    <SplideSlide>
-                        <div class="">
-                            <img src="/img/un.jpg" alt="" class="w-full h-72">
-                            <h1 class="text-lg text-center text-gray-500">Reception</h1>
-                        </div>
-                    </SplideSlide>                  
+                    </SplideSlide>                   -->
                 </Splide>                
             </div>                       
         </div>
         <div>
             <CorpsAcademique/>
         </div>
-    
-
 </template>
 <script>
     import { Splide, SplideSlide } from '@splidejs/vue-splide';
@@ -59,18 +56,10 @@
             Splide,
             SplideSlide,
         },
-        // setup(){
-        //     const options ={
-        //                     perPage :2,
-        //                     type : 'loop',
-        //                     rewind : true,
-        //                     autoplay: true,
-        //                     interval: 2000,
-        //                     speed: 1000,
-        //                     arrows: true,
-        //                     pagination: true,
-        //                     drag: true,
-        //                  }
-        // }
+        methods: {
+            VoirPhoto(){
+                let photo = document.querySelectorAll('image'),attribut;
+            }
+        },
     } );
 </script>
