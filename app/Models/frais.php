@@ -7,8 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class frais extends Model
 {
-    protected $fillable=['type','montant'];
+    protected $fillable=['montant', 'niveau_id',];
     use HasFactory;
-    protected $fillable = ['type','montant'];
 }
 

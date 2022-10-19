@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class semestre extends Model
 {
     use HasFactory;
-    protected $fillable = ['system','niveau'];
+    protected $fillable = ['nom','niveau_id'];
 }

@@ -6,7 +6,8 @@ import Inscription from '../pages/Inscription.vue';
 import Programme from '../pages/Programme.vue';
 import Frais from '../pages/Frais.vue';
 import About from '../pages/About.vue';
-import DetailsActu from '../pages/DetailsActu.vue'
+import DetailsActu from '../pages/DetailsActu.vue';
+import texteLegaux from '../pages/texteLegaux.vue'
 
 const routes = [
     {
@@ -43,6 +44,11 @@ const routes = [
         name : 'DetailsActu',
         path : '/DetailsActu',
         component : DetailsActu
+    },
+    {
+        name : 'Texte Legaux',
+        path : '/texteLegaux',
+        component : texteLegaux
     }  
 ];
 

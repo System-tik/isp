@@ -3,31 +3,36 @@
 namespace App\Http\Livewire\Admin;
 
 use App\Models\semestre;
+use App\Models\system;
+use App\Models\niveau;
 use Livewire\Component;
 
 class VSemestre extends Component
 {
-    public $system;
-    public $niveau;
+    public $nom;
+    public $niveau_id;
+    public $niveaux;
     public $selectedId;
     public $semestres;
 
     protected $messages = [
-        'system.required' => 'Veuillez indiquer le système.',
-        'niveau.required' => 'Veuillez indiquer le niveau.',
+        'nom.required' => 'Veuillez indiquer le système.',
+        'niveau_id.required' => 'Veuillez indiquer le niveau.',
         'selectedId' => 'Veuillez séléctionner un semestre.'
     ];
     public function render()
     {
-        $this->semestres = semestre::all();
+        $this->semestres = semestre::join('niveaux', 'niveaux.id', '=', 'semestres.niveau_id')->orderBy('semestres.id', 'asc')->get('*');
+        $this->systemes = system::all();
+        $this->niveaux = niveau::all();
         return view('livewire.admin.v-semestre');
     }
 
     public function store()
     {
         $validate = $this->validate([
-            'system' => 'required',
-            'niveau' => 'required'
+            'nom' => 'required',
+            'niveau_id' => 'required'
         ]);
 
         try {
@@ -43,22 +48,22 @@ class VSemestre extends Component
 
     public function clear()
     {
-        $this->system = "";
-        $this->niveau = "";
+        $this->nom = "";
+        $this->niveau_id = "";
     }
 
     public function selectedId($donnees)
     {
-        $this->system = $donnees['system'];
-        $this->niveau = $donnees['niveau'];
+        $this->nom = $donnees['nom'];
+        $this->niveau_id = $donnees['niveau_id'];
         $this->selectedId = $donnees['id'];
     }
 
     public function update()
     {
         $validate = $this->validate([
-            'system' => 'required',
-            'niveau' => 'required',
+            'nom' => 'required',
+            'niveau_id' => 'required',
             'selectedId' => 'required'
         ]);
 

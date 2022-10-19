@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('conditions', function (Blueprint $table) {
             $table->id();
+            $table->string('titre');
             $table->string('descrip');
             $table->timestamps();
         });

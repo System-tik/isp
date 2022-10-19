@@ -15,8 +15,9 @@ return new class extends Migration
     {
         Schema::create('frais', function (Blueprint $table) {
             $table->id();
-            $table->string('type');
-            $table->integer('montant');
+            /* $table->string('type'); */
+            $table->double('montant');
+            $table->integer('niveau_id');
             $table->timestamps();
         });
     }

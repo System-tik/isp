@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('nomopt');
             $table->integer('iddep');
+            $table->text('description');
             $table->timestamps();
         });
     }

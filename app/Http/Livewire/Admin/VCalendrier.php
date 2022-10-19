@@ -40,8 +40,8 @@ class VCalendrier extends Component
         $this->selectId = $data["id"];
         $this->activite = $data["activite"];
         $this->descrip = $data['descrip'];
-        $this->activite = $data["debut"];
-        $this->descrip = $data['fin']; 
+        $this->debut = $data["debut"];
+        $this->fin = $data['fin']; 
     }
 
     public function update(){
@@ -53,6 +53,7 @@ class VCalendrier extends Component
         ]);
         $result=calendrier::find($this->selectId);
         $result->update($record);
+        $this->clear();
     }
     public function delete(){
         $record=$this->validate([
@@ -63,5 +64,6 @@ class VCalendrier extends Component
         ]);
         $result=calendrier::find($this->selectId);
         $result->delete();
+        $this->clear();
     }
 }

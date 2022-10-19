@@ -1,18 +1,56 @@
-<div>
-<<<<<<< HEAD
-    {{-- Success is as dangerous as failure. --}}
-    <div>
-        <input type="text" placeholder="titre" wire:model='type'>
-        <input type="number" placeholder="description" wire:model='montant'>
-        <button wire:click='delete'>CREER</button>
-        @foreach ($fraiss as $i)
-        <div wire:click="select({{$i}})" >{{$i}}</div>
-            
-        @endforeach
-    </div>
-=======
+<div class="">
+    <div class="grid grid-cols-4 gap-4 px-10">
+        <div class="p-3 bg-white rounded-lg shadow">
+            <h1 class="pb-2 text-xl font-bold border-b">Frais</h1>
     
-    <input type="type" wire:model="type">
+            <div class="flex flex-col gap-1 py-2">
+                {{-- <div class="flex flex-col">
+                    <label for="" class="py-1">Type</label>
+                    <input wire:model="type" type="text" class="w-full border-gray-200 rounded">
+                </div> --}}
+                <div class="flex flex-col">
+                    <label for="" class="py-1">Montant</label>
+                    <input wire:model="montant" type="text" class="w-full border-gray-200 rounded">
+                </div>
+                <div class="flex flex-col">
+                    <label for="" class="py-1">Niveau</label>
+                    <select name="" id="" wire:model="niveau_id">
+                        @foreach ($niveaux as $idn)
+                        <option value="{{ $idn->id }}">{{ $idn->lib }}</option>
+                        @endforeach
+                    </select>
+                </div>
+    
+                <div class="grid grid-cols-2 gap-4 py-4">
+                    <button wire:click="clear" class="px-2 text-lg text-white bg-gray-600">Clear</button>
+                    <button wire:click="store" class="px-2 text-lg text-white bg-green-600">Enregistrer</button>
+                    <button wire:click="update" class="px-2 text-lg text-white bg-yellow-600">Modifier</button>
+                    <button wire:click="delete" class="px-2 text-lg text-white bg-red-600">Supprimer</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-span-3 p-3 bg-white rounded-lg shadow">
+            <h1 class="pb-2 text-xl font-bold border-b">Liste des données</h1>
+            <table class="w-full">
+                @foreach ($fraiss as $i)
+                <tr wire:click="select({{$i}})" class="border-b cursor-pointer hover:bg-gray-50">
+                    <td class="">{{ $i->id }}</td>
+                    {{-- <td class="">{{ $i->type }}</td> --}}
+                    <td class="">{{ $i->montant }}</td>
+                    <td class="">{{ $i->lib }}</td>
+                </tr>
+                @endforeach
+            </table>
+        </div>
+    </div>
+
+
+
+
+
+
+
+   {{--  <input type="type" wire:model="type">
     @error('type')<span>{{$message}}</span><br>@enderror
     <input type="montant" wire:model="montant">
     @error('montant')<span>{{$message}}</span><br>@enderror
@@ -25,6 +63,5 @@
 
     @foreach ($frais as $frai)
         <p wire:click="selectedId({{$frai}})">{{ $frai->type }}</p>
-    @endforeach
->>>>>>> 923c6d82289a2e489d10d661787e60bf0363d471
+    @endforeach --}}
 </div>

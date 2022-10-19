@@ -17,7 +17,8 @@ class VSysteme extends Component
         return view('livewire.admin.v-systeme');
     }
 
-    public function store(){
+    public function store()
+    {
         $record=$this->validate([
             'libelle'=>'required',
         ]);
@@ -27,24 +28,28 @@ class VSysteme extends Component
     public function clear(){
         $this->libelle="";
     }
+    
     public function select($data)
     {
         $this->selectId=$data['id'];
         $this->libelle=$data['libelle'];
     }
-    public function delete(){
-        $record=$this->validate([
-            'libelle'=>'required',
-        ]);
-        $valide=system::find($this->selectId);
-        $valide->delete();
-    }
+    
     public function update(){
         $record=$this->validate([
             'libelle'=>'required',
         ]);
         $valide=system::find($this->selectId);
         $valide->update($record);
+        $this->clear();
     }
 
+    public function delete(){
+        $record=$this->validate([
+            'libelle'=>'required',
+        ]);
+        $valide=system::find($this->selectId);
+        $valide->delete();
+        $this->clear();
+    }
 }

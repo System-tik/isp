@@ -13,7 +13,7 @@
         
     
         <Footer/>
-        <button id="retour" @click="Top()" class="fixed bottom-5 right-2 bg-gray-900 p-2 text-white animate__animated animate__bounce">Top</button>
+        <button id="retour" @click="Top()" class="fixed p-2 text-white bg-gray-900 bottom-5 right-2 animate__animated animate__bounce">Top</button>
     </div>
 </template>
 <script>
@@ -24,30 +24,7 @@
         components:{
             Nav,
             Footer
-        },
-        methods: {
-            Top(){
-                // let btn = document.getElementById('retour');
-               window.scroll({
-                top:0,
-                behavior : 'smooth'
-               })
-            },
-           
-
         }
-
+    
     }
-    document.addEventListener("DOMContentLoaded", function (event) {
-        
-        var btn = document.getElementById('retour');
-        btn.classList.add('hidden');
-        window.addEventListener('scroll',()=>{
-            if(document.documentElement.scrollTop > 60 || document.body.scrollTop>60){
-                btn.classList.remove('hidden')
-            } else{
-                btn.classList.add('hidden')
-            }
-        })
-    });
     </script>

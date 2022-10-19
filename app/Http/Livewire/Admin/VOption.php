@@ -3,14 +3,17 @@
 namespace App\Http\Livewire\Admin;
 
 use App\Models\option;
+use App\Models\departement;
 use Livewire\Component;
 
 class VOption extends Component
 {
     public $nomopt;
     public $iddep;
+    public $description;
     public $selectedId;
     public $options;
+    public $departements;
 
     protected $messages = [
         'nomopt.required' => 'Veuillez indiquer l\'option.',
@@ -20,7 +23,8 @@ class VOption extends Component
 
     public function render()
     {
-        $this->options = option::all();
+        $this->departements = departement::all();
+        $this->options = option::join('departements', 'departements.id', '=', 'options.iddep')->get('*');
         return view('livewire.admin.v-option');
     }
 
@@ -28,8 +32,10 @@ class VOption extends Component
     {
         $validate = $this->validate([
             'nomopt' => 'required',
+            'description' => 'required',
             'iddep' => 'required'
         ]);
+        //dd($validate);
 
         try {
             $record = option::create($validate);
@@ -45,12 +51,14 @@ class VOption extends Component
     public function clear()
     {
         $this->nomopt = "";
+        $this->description = "";
         $this->iddep = "";
     }
 
     public function selectedId($donnees)
     {
         $this->nomopt = $donnees['nomopt'];
+        $this->description = $donnees['description'];
         $this->iddep = $donnees['iddep'];
         $this->selectedId = $donnees['id'];
     }
@@ -59,6 +67,7 @@ class VOption extends Component
     {
         $validate = $this->validate([
             'nomopt' => 'required',
+            'decription' => 'required',
             'iddep' => 'required',
             'selectedId' => 'required'
         ]);
