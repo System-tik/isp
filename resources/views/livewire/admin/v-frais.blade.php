@@ -4,10 +4,10 @@
             <h1 class="pb-2 text-xl font-bold border-b">Frais</h1>
     
             <div class="flex flex-col gap-1 py-2">
-                <div class="flex flex-col">
+                {{-- <div class="flex flex-col">
                     <label for="" class="py-1">Type</label>
                     <input wire:model="type" type="text" class="w-full border-gray-200 rounded">
-                </div>
+                </div> --}}
                 <div class="flex flex-col">
                     <label for="" class="py-1">Montant</label>
                     <input wire:model="montant" type="text" class="w-full border-gray-200 rounded">
@@ -17,14 +17,6 @@
                     <select name="" id="" wire:model="niveau_id">
                         @foreach ($niveaux as $idn)
                         <option value="{{ $idn->id }}">{{ $idn->lib }}</option>
-                        @endforeach
-                    </select>
-                </div>
-                <div class="flex flex-col">
-                    <label for="" class="py-1">Semestre</label>
-                    <select name="" id="" wire:model="system_id">
-                        @foreach ($systemes as $ids)
-                        <option value="{{ $ids->id }}">{{ $ids->libelle }}</option>
                         @endforeach
                     </select>
                 </div>
@@ -40,20 +32,12 @@
         <div class="col-span-3 p-3 bg-white rounded-lg shadow">
             <h1 class="pb-2 text-xl font-bold border-b">Liste des données</h1>
             <table class="w-full">
-                <tr class="flex w-full gap-20 py-3 border-b">
-                    <td>Id</td>
-                    <td class="">Type</td>
-                    <td class="">Montant</td>
-                    <td class="">Niveau</td>
-                    <td class="flex-1">Systeme</td>
-                </tr>
                 @foreach ($fraiss as $i)
-                <tr wire:click="select({{$i}})" class="flex w-full gap-20 border-b cursor-pointer hover:bg-gray-50">
+                <tr wire:click="select({{$i}})" class="border-b cursor-pointer hover:bg-gray-50">
                     <td class="">{{ $i->id }}</td>
-                    <td class="">{{ $i->type }}</td>
+                    {{-- <td class="">{{ $i->type }}</td> --}}
                     <td class="">{{ $i->montant }}</td>
-                    <td class="">{{ $idn->lib }}</td>
-                    <td class="">{{ $ids->libelle }}</td>
+                    <td class="">{{ $i->lib }}</td>
                 </tr>
                 @endforeach
             </table>

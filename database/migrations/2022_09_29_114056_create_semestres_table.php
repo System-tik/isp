@@ -16,7 +16,6 @@ return new class extends Migration
         Schema::create('semestres', function (Blueprint $table) {
             $table->id();
             $table->string('nom');
-            $table->integer('system_id');
             $table->integer('niveau_id');
             $table->timestamps();
         });

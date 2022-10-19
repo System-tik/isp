@@ -13,11 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('options', function (Blueprint $table) {
+        Schema::create('headers', function (Blueprint $table) {
             $table->id();
-            $table->string('nomopt');
-            $table->integer('iddep');
-            $table->text('description');
             $table->timestamps();
         });
     }
@@ -29,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('options');
+        Schema::dropIfExists('headers');
     }
 };

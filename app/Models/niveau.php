@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class niveau extends Model
 {
-    protected $fillable=['lib', 'system-id'];
+    protected $fillable=['lib', 'system_id'];
     use HasFactory;
 }

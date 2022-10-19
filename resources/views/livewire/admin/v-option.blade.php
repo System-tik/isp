@@ -1,16 +1,21 @@
 <div>
-    <div class="grid grid-cols-4 gap-4 px-10">
-        <div class="p-3 bg-white rounded-lg shadow">
+    <div class="grid gap-2 grid-row-4">
+        <div class="p-2 bg-white rounded-lg shadow">
             <h1 class="pb-2 text-xl font-bold border-b">Options</h1>
     
             <div class="flex flex-col gap-1 py-2">
                 <div class="flex flex-col">
-                    <label wire:model="nomopt" for="" class="py-1">Option</label>
-                    <input type="text" class="w-full border-gray-200 rounded">
+                    <label  for="" class="py-1">Option</label>
+                    <input type="text" class="w-full border-gray-200 rounded" wire:model="nomopt">
+                </div>
+                <div class="py-2">
+                    <label  for="" class="py-1">Description</label>
+                    <textarea class="w-full rounded" rows="3" wire:model="description"></textarea>
                 </div>
                 <div class="flex flex-col">
                     <label for="" class="py-1">Département</label>
                     <select name="" id="" wire:model="iddep">
+                        <option>Choisir Département</option>
                         @foreach ($departements as $idd)
                         <option value="{{ $idd->id }}">{{ $idd->nomdep }}</option>
                         @endforeach
@@ -27,19 +32,16 @@
                 </div>
             </div>
         </div>
-        <div class="col-span-3 p-3 bg-white rounded-lg shadow">
-            <h1 class="pb-2 text-xl font-bold border-b">Liste des données</h1>
+        <div class="p-2 bg-white rounded-lg shadow ">
+            <h1 class="pb-2 text-xl font-bold border-b">Les options</h1>
             <table class="w-full">
-                <tr class="flex w-full gap-2 py-3 border-b">
-                    <td>Id</td>
-                    <td class="">Option</td>
-                    <td class="flex-1">Département</td>
-                </tr>
                 @foreach ($options as $i)
-                <tr wire:click="selectedId({{$i}})" class="flex w-full gap-6 border-b cursor-pointer hover:bg-gray-50">
-                    <td>{{ $i->id }}</td>
-                    <td class="">{{ $i->nomopt }}</td>
-                    <td class="">{{ $i->nomdep }}</td>
+                <tr wire:click="selectedId({{$i}})" class="border-b cursor-pointer hover:bg-gray-50">
+                    <td class="px-2 bg-blue-200">{{$loop->index+1}}</td>
+                    <td class="">
+                        <p>{{ $i->nomopt }}</p>
+                        {{ $i->nomdep }}
+                    </td>                    
                 </tr>
                 @endforeach
             </table>

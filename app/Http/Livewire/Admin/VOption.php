@@ -10,6 +10,7 @@ class VOption extends Component
 {
     public $nomopt;
     public $iddep;
+    public $description;
     public $selectedId;
     public $options;
     public $departements;
@@ -31,8 +32,10 @@ class VOption extends Component
     {
         $validate = $this->validate([
             'nomopt' => 'required',
+            'description' => 'required',
             'iddep' => 'required'
         ]);
+        //dd($validate);
 
         try {
             $record = option::create($validate);
@@ -48,12 +51,14 @@ class VOption extends Component
     public function clear()
     {
         $this->nomopt = "";
+        $this->description = "";
         $this->iddep = "";
     }
 
     public function selectedId($donnees)
     {
         $this->nomopt = $donnees['nomopt'];
+        $this->description = $donnees['description'];
         $this->iddep = $donnees['iddep'];
         $this->selectedId = $donnees['id'];
     }
@@ -62,6 +67,7 @@ class VOption extends Component
     {
         $validate = $this->validate([
             'nomopt' => 'required',
+            'decription' => 'required',
             'iddep' => 'required',
             'selectedId' => 'required'
         ]);

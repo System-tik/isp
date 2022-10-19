@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('nomCours');
             $table->string('descrip');
             $table->integer('credit');
+            $table->integer('semestre_id');
             $table->timestamps();
         });
     }

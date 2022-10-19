@@ -32,7 +32,7 @@
     </head>
     <body class="m-0 font-sans text-base antialiased font-normal dark:bg-slate-900 leading-default bg-gray-50 text-slate-500" 
         x-data="{
-            menu:[true,false,false,false,false],
+            menu:[false,false,false,false,false, false, false, false, false, false, false, false, false, true, ],
             afficher(b){
                 this.menu[b] = true 
                 for(var i = 0;i < this.menu.length; i++){
@@ -71,7 +71,7 @@
             </div>
             
             <hr class="h-px mt-0 bg-transparent bg-gradient-to-r from-transparent via-black/40 to-transparent dark:bg-gradient-to-r dark:from-transparent dark:via-white dark:to-transparent" />
-            <div class="items-center block w-auto max-h-screen overflow-auto h-sidenav grow basis-full">
+            <div class="items-center block w-auto max-h-screen overflow-auto {{-- h-sidenav --}} grow basis-full">
                 <ul class="flex flex-col pl-0 mb-0">
                     <li class="mt-0.5 w-full" @click ="afficher(0)"> 
                         <a class="py-2.7 bg-blue-500/13 dark:text-white dark:opacity-80 text-sm ease-nav-brand my-0 mx-2 flex items-center whitespace-nowrap rounded-lg px-4 font-semibold text-slate-700 transition-colors" href="#">
@@ -81,12 +81,20 @@
                             <span class="ml-1 duration-300 opacity-100 pointer-events-none ease">Dashboard</span>
                         </a>
                     </li>
+                    <li class="mt-0.5 w-full" @click="afficher(13)">
+                        <a class=" dark:text-white dark:opacity-80 py-2.7 text-sm ease-nav-brand my-0 mx-2 flex items-center whitespace-nowrap px-4 transition-colors" href="#">
+                            <div class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
+                                <i class="relative top-0 text-sm leading-normal text-cyan-500 ni ni-app"></i>
+                            </div>
+                            <span class="ml-1 duration-300 opacity-100 pointer-events-none ease">Info institut</span>
+                        </a>
+                    </li>
                     <li class="mt-0.5 w-full" @click="afficher(1)">
                         <a class=" dark:text-white dark:opacity-80 py-2.7 text-sm ease-nav-brand my-0 mx-2 flex items-center whitespace-nowrap px-4 transition-colors" href="#">
                             <div class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
                                 <i class="relative top-0 text-sm leading-normal text-cyan-500 ni ni-app"></i>
                             </div>
-                            <span class="ml-1 duration-300 opacity-100 pointer-events-none ease">Inscription</span>
+                            <span class="ml-1 duration-300 opacity-100 pointer-events-none ease">Header</span>
                         </a>
                     </li>
                     
@@ -106,7 +114,15 @@
                             <span class="ml-1 duration-300 opacity-100 pointer-events-none ease">Textes legaux</span>
                         </a>
                     </li>
-                    <li class="mt-0.5 w-full" @click="afficher(4)"> 
+                    <li class="mt-0.5 w-full" @click="afficher(4)">
+                        <a class=" dark:text-white dark:opacity-80 py-2.7 text-sm ease-nav-brand my-0 mx-2 flex items-center whitespace-nowrap px-4 transition-colors" href="#">
+                            <div class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
+                                <i class="relative top-0 text-sm leading-normal text-cyan-500 ni ni-app"></i>
+                            </div>
+                            <span class="ml-1 duration-300 opacity-100 pointer-events-none ease">Recherche</span>
+                        </a>
+                    </li>
+                    <li class="mt-0.5 w-full" @click="afficher(5)"> 
                         <a class=" dark:text-white dark:opacity-80 py-2.7 text-sm ease-nav-brand my-0 mx-2 flex items-center whitespace-nowrap px-4 transition-colors" href="#">
                             <div class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
                                 <i class="relative top-0 text-sm leading-normal text-cyan-500 ni ni-app"></i>
@@ -114,12 +130,60 @@
                             <span class="ml-1 duration-300 opacity-100 pointer-events-none ease">Actualités</span>
                         </a>
                     </li>
+                    <li class="mt-0.5 w-full" @click="afficher(6)">
+                        <a class=" dark:text-white dark:opacity-80 py-2.7 text-sm ease-nav-brand my-0 mx-2 flex items-center whitespace-nowrap px-4 transition-colors" href="#">
+                            <div class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
+                                <i class="relative top-0 text-sm leading-normal text-cyan-500 ni ni-app"></i>
+                            </div>
+                            <span class="ml-1 duration-300 opacity-100 pointer-events-none ease">Frais</span>
+                        </a>
+                    </li>
+                    <li class="mt-0.5 w-full" @click="afficher(7)">
+                        <a class=" dark:text-white dark:opacity-80 py-2.7 text-sm ease-nav-brand my-0 mx-2 flex items-center whitespace-nowrap px-4 transition-colors" href="#">
+                            <div class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
+                                <i class="relative top-0 text-sm leading-normal text-cyan-500 ni ni-app"></i>
+                            </div>
+                            <span class="ml-1 duration-300 opacity-100 pointer-events-none ease">Programme de cours</span>
+                        </a>
+                    </li>
+                    <li class="mt-0.5 w-full" @click="afficher(8)">
+                        <a class=" dark:text-white dark:opacity-80 py-2.7 text-sm ease-nav-brand my-0 mx-2 flex items-center whitespace-nowrap px-4 transition-colors" href="#">
+                            <div class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
+                                <i class="relative top-0 text-sm leading-normal text-cyan-500 ni ni-app"></i>
+                            </div>
+                            <span class="ml-1 duration-300 opacity-100 pointer-events-none ease">Gallerie images</span>
+                        </a>
+                    </li>
+                    <li class="mt-0.5 w-full" @click="afficher(9)">
+                        <a class=" dark:text-white dark:opacity-80 py-2.7 text-sm ease-nav-brand my-0 mx-2 flex items-center whitespace-nowrap px-4 transition-colors" href="#">
+                            <div class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
+                                <i class="relative top-0 text-sm leading-normal text-cyan-500 ni ni-app"></i>
+                            </div>
+                            <span class="ml-1 duration-300 opacity-100 pointer-events-none ease">Modalités d'inscription</span>
+                        </a>
+                    </li>
+                    <li class="mt-0.5 w-full" @click="afficher(10)">
+                        <a class=" dark:text-white dark:opacity-80 py-2.7 text-sm ease-nav-brand my-0 mx-2 flex items-center whitespace-nowrap px-4 transition-colors" href="#">
+                            <div class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
+                                <i class="relative top-0 text-sm leading-normal text-cyan-500 ni ni-app"></i>
+                            </div>
+                            <span class="ml-1 duration-300 opacity-100 pointer-events-none ease">Inscription</span>
+                        </a>
+                    </li>
+                    <li class="mt-0.5 w-full" @click="afficher(11)">
+                        <a class=" dark:text-white dark:opacity-80 py-2.7 text-sm ease-nav-brand my-0 mx-2 flex items-center whitespace-nowrap px-4 transition-colors" href="#">
+                            <div class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
+                                <i class="relative top-0 text-sm leading-normal text-cyan-500 ni ni-app"></i>
+                            </div>
+                            <span class="ml-1 duration-300 opacity-100 pointer-events-none ease">Calendrier academique</span>
+                        </a>
+                    </li>
                     <li class="w-full mt-4">
                         <h6 class="pl-6 ml-2 text-xs font-bold leading-tight uppercase dark:text-white opacity-60">Comptes admin</h6>
                         
                     </li>
 
-                    <li class="mt-0.5 w-full">
+                    <li class="mt-0.5 w-full" @click="afficher(12)">
                         <a class=" dark:text-white dark:opacity-80 py-2.7 text-sm ease-nav-brand my-0 mx-2 flex items-center whitespace-nowrap px-4 transition-colors" href="./dash/pages/profile.html">
                         <div class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
                             <i class="relative top-0 text-sm leading-normal text-slate-700 ni ni-single-02"></i>
@@ -147,13 +211,14 @@
                         <!-- breadcrumb -->
                         <ol class="flex flex-wrap pt-1 mr-12 bg-transparent rounded-lg sm:mr-16">
 
-                        <li class="text-sm leading-normal">
-                            <a class="text-white opacity-50" href="javascript:;">Pages</a>
-                        </li>
+                            <li class="text-sm leading-normal">
+                                <a class="text-white opacity-50" href="javascript:;">Pages</a>
+                            </li>
 
-                        <li class="text-sm pl-2 capitalize leading-normal text-white before:float-left before:pr-2 before:text-white before:content-['/']" aria-current="page">Dashboard</li>
+                            <li class="text-sm pl-2 capitalize leading-normal text-white before:float-left before:pr-2 before:text-white before:content-['/']" aria-current="page">
+                                Dashboard
+                            </li>
                         </ol>
-                        <h6 class="mb-0 font-bold text-white capitalize">Dashboard</h6>
                     </nav>
 
                     <div class="flex items-center mt-2 grow sm:mt-0 sm:mr-6 md:mr-0 lg:flex lg:basis-auto">
@@ -271,14 +336,58 @@
             <!-- end Navbar -->
 
             {{-- Main menu --}}
-            {{-- <livewire:admin.v-dash> --}}
+            {{--  --}}
+            <div>
+                <div x-show="menu[0]">
+                    <livewire:admin.v-dash>
+                </div>
+                <div x-show="menu[1]">
+                    <livewire:admin.v-header>
+                </div>
+                <div x-show="menu[2]">
+                    <livewire:admin.v-about >
+                </div>
+                <div x-show="menu[3]">
+                    <livewire:admin.v-textes>
+                </div>
+                <div x-show="menu[4]">
+                    <livewire:admin.v-recherche>
+                </div>
+                <div x-show="menu[5]">
+                    <livewire:admin.v-actu>
+                </div>
+                <div x-show="menu[6]">
+                    <livewire:admin.v-frais>
+                </div>
+                <div x-show="menu[7]">
+                    <livewire:admin.v-programme>
+                </div>
+                <div x-show="menu[8]">
+                    <livewire:admin.v-infrastructure>
+                </div>
+                <div x-show="menu[9]">
+                    <livewire:admin.v-condition-ad>
+                </div>
+                <div x-show="menu[10]">
+                    <livewire:admin.v-inscription>
+                </div>
+                <div x-show="menu[11]">
+                    <livewire:admin.v-calendrier>
+                </div>
+                <div x-show="menu[12]">
+                    <livewire:admin.v-calendrier>
+                </div>
+                <div x-show="menu[13]">
+                    <livewire:admin.v-institut>
+                </div>
+            </div>
             {{-- <livewire:admin.v-condition-ad  x-show="menu[1]"> --}} {{-- ok --}}
             {{-- <livewire:admin.v-about  x-show="menu[2]"> --}} {{-- ok --}}
             {{-- <livewire:admin.v-calendrier> --}} {{-- ok --}}
             {{-- <livewire:admin.v-departement> --}} {{-- Pas finit --}}
             {{-- <livewire:admin.v-frais> --}} {{-- Pas finit --}}
             {{-- <livewire:admin.v-infrastructure> --}} {{-- ok --}}
-            <livewire:admin.v-option> {{-- Pas finit --}}
+            {{-- <livewire:admin.v-option> --}} {{-- Pas finit --}}
             {{-- <livewire:admin.v-programme> --}} {{-- Pas finit --}}
             {{-- <livewire:admin.v-section>  --}}  {{-- ok --}}
             {{-- <livewire:admin.v-semestre> --}} {{-- Pas finit --}}

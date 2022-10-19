@@ -1,6 +1,6 @@
 <div>
 
-    <div class="grid grid-cols-4 gap-4 px-10">
+    <div class="flex flex-col gap-2">
         <div class="p-3 bg-white rounded-lg shadow">
             <h1 class="pb-2 text-xl font-bold border-b">Départements</h1>
     
@@ -12,6 +12,7 @@
                 <div class="flex flex-col">
                     <label for="" class="py-1">Section</label>
                     <select name="" id="" wire:model="idsec">
+                        <option>Choisir une section</option>
                         @foreach ($sections as $ids)
                             <option  value="{{ $ids->id }}">{{ $ids->nomsec }}</option>
                         @endforeach
@@ -26,19 +27,16 @@
                 </div>
             </div>
         </div>
-        <div class="col-span-3 p-3 bg-white rounded-lg shadow">
-            <h1 class="pb-2 text-xl font-bold border-b">Liste des données</h1>
+        <div class="flex-1 p-2 bg-white rounded-lg shadow">
+            <h1 class="pb-2 text-xl font-bold border-b">Les departements</h1>
             <table class="w-full">
-                <tr class="flex w-full gap-10 py-3 border-b">
-                    <td>Id</td>
-                    <td class="">Nom</td>
-                    <td class="flex-1">Section</td>
-                </tr>
                 @foreach ($departements as $i)
-                <tr wire:click="selectedId({{$i}})" class="flex w-full gap-8 border-b cursor-pointer hover:bg-gray-50">
-                    <td>{{ $i->id }}</td>
-                    <td class="">{{ $i->nomdep }}</td>
-                    <td class="">{{ $i->nomsec }}</td>
+                <tr wire:click="selectedId({{$i}})" class="w-full border-b cursor-pointer hover:bg-gray-50">
+                    <td class="pl-3 bg-blue-200">{{ $loop->index + 1 }}</td>
+                    <td class="">
+                        <p>{{ $i->nomdep }}</p>
+                        {{ $i->nomsec }}
+                    </td>
                 </tr>
                 @endforeach
             </table>

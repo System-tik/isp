@@ -1,6 +1,6 @@
-<div>
-    <div class="grid grid-cols-4 gap-4 px-10">
-        <div class="p-3 bg-white rounded-lg shadow">
+<div class="">
+    <div class="flex flex-col gap-2">
+        <div class="p-2 bg-white rounded-lg shadow">
             <h1 class="pb-2 text-xl font-bold border-b">Sections</h1>
     
             <div class="flex flex-col gap-1 py-2">
@@ -17,17 +17,16 @@
                 </div>
             </div>
         </div>
-        <div class="col-span-3 p-3 bg-white rounded-lg shadow">
-            <h1 class="pb-2 text-xl font-bold border-b">Liste des données</h1>
+        <div class="flex-1 p-2 bg-white rounded-lg shadow ">
+            <h1 class="pb-2 text-xl font-bold border-b">Les sections</h1>
             <table class="w-full">
-                <tr class="flex w-full gap-2 py-3 border-b">
-                    <td>Id</td>
+                {{-- <tr class="flex w-full gap-2 py-3 border-b">
                     <td class="flex-1">Nom section</td>
-                </tr>
+                </tr> --}}
                 @foreach ($sections as $i)
                 <tr wire:click="selectedId({{$i}})" class="flex w-full gap-6 border-b cursor-pointer hover:bg-gray-50">
-                    <td>{{ $i->id }}</td>
-                    <td class="">{{ $i->nomsec }}</td>
+                    <td class="px-2 bg-blue-200">{{$loop->index + 1}}</td>
+                    <td class="text-lg">{{ $i->nomsec }}</td>
                 </tr>
                 @endforeach
             </table>

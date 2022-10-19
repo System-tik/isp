@@ -4,27 +4,33 @@ namespace App\Http\Livewire\Admin;
 
 use App\Models\program;
 use App\Models\option;
+use App\Models\semestre;
 use Livewire\Component;
 
 class VProgramme extends Component
 {
     public $idoption;
     public $options;
+    public $semestres;
     public $nomCours;
     public $descrip;
+    public $semestre_id;
     public $selectedId;
     public $programmes;
+    public $credit;
 
     protected $messages = [
         'idoption.required' => 'Veuillez indiquer l\'option.',
         'nomCours.required' => 'Veuillez saisir le cours.',
         'descrip.required' => 'Veuillez saisir une déscription.',
+        'semestre_id.required'=>'Veuillez indiquer le semestre',
         'selectedId' => 'Veuillez séléctionner un programme.'
     ];
 
     public function render()
     {
         $this->programmes = program::all();
+        $this->semestres = semestre::all();
         $this->options = option::all();
         return view('livewire.admin.v-programme');
     }
@@ -34,8 +40,11 @@ class VProgramme extends Component
         $validate = $this->validate([
             'idoption' => 'required',
             'nomCours' => 'required',
-            'descrip' => 'required'
+            'semestre_id' => 'required',
+            'descrip' => 'required',
+            'credit' => 'required'
         ]);
+        //dd($validate);
 
         try {
             $record = program::create($validate);
@@ -53,13 +62,18 @@ class VProgramme extends Component
         $this->idoption = "";
         $this->nomCours = "";
         $this->descrip = "";
+        $this->semestre_id = "";
+        $this->credit = "";
     }
 
     public function selectedId($donnees)
     {
         $this->idoption = $donnees['idoption'];
         $this->nomCours = $donnees['nomCours'];
+        $this->credit = $donnees['credit'];
+        $this->semestre_id = $donnees['semestre_id'];
         $this->descrip = $donnees['descrip'];
+
         $this->selectedId = $donnees['id'];
     }
 
@@ -68,7 +82,9 @@ class VProgramme extends Component
         $validate = $this->validate([
             'idoption' => 'required',
             'nomCours' => 'required',
+            'credit' => 'required',
             'descrip' => 'required',
+            'semestre_id' => 'required',
             'selectedId' => 'required'
         ]);
 
@@ -97,3 +113,5 @@ class VProgramme extends Component
         }
     }
 }
+
+

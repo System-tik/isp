@@ -1,24 +1,17 @@
 <div>
-    <div class="grid grid-cols-4 gap-4 px-10">
+    <div class="flex flex-col gap-2">
         <div class="p-3 bg-white rounded-lg shadow">
             <h1 class="pb-2 text-xl font-bold border-b">Semestres</h1>
     
             <div class="flex flex-col gap-1 py-2">
                 <div class="flex flex-col">
                     <label for="" class="py-1">Nom</label>
-                    <input type="text" class="w-full border-gray-200 rounded">
-                </div>
-                <div class="flex flex-col">
-                    <label for="" class="py-1">Systeme</label>
-                    <select name="" id="" wire:model="idopt">
-                        @foreach ($systemes as $ids)
-                        <option value="{{ $ids->id }}">{{ $ids->libelle }}</option>
-                        @endforeach
-                    </select>
+                    <input type="text" class="w-full border-gray-200 rounded" wire:model="nom">
                 </div>
                 <div class="flex flex-col">
                     <label for="" class="py-1">Niveau</label>
-                    <select name="" id="" wire:model="idopt">
+                    <select name="" id="" wire:model="niveau_id">
+                        <option>Choisir niveau</option>
                         @foreach ($niveaux as $idn)
                         <option value="{{ $idn->id }}">{{ $idn->lib }}</option>
                         @endforeach
@@ -26,21 +19,25 @@
                 </div>
     
                 <div class="grid grid-cols-2 gap-4 py-4">
-                    <button class="px-2 text-lg text-white bg-gray-600">Clear</button>
-                    <button class="px-2 text-lg text-white bg-green-600">Enregistrer</button>
-                    <button class="px-2 text-lg text-white bg-yellow-600">Modifier</button>
-                    <button class="px-2 text-lg text-white bg-red-600">Supprimer</button>
+                    <button class="px-2 text-lg text-white bg-gray-600" wire:click="clear">Clear</button>
+                    <button class="px-2 text-lg text-white bg-green-600"wire:click="store">Enregistrer</button>
+                    <button class="px-2 text-lg text-white bg-yellow-600"wire:click="update">Modifier</button>
+                    <button class="px-2 text-lg text-white bg-red-600"wire:click="delete">Supprimer</button>
                 </div>
             </div>
         </div>
-        <div class="col-span-3 p-3 bg-white rounded-lg shadow">
-            <h1 class="pb-2 text-xl font-bold border-b">Liste des données</h1>
+        <div class="p-3 bg-white rounded-lg shadow ">
+            <h1 class="pb-2 text-xl font-bold border-b">Les semestres</h1>
             <table class="w-full">
-                <tr class="flex w-full gap-2 py-3 border-b">
-                    <td>Id</td>
-                    <td class="flex-1">Système</td>
-                    <td class="flex-1">Niveau</td>
+                @foreach ($semestres as $sem)
+                    
+                <tr wire:click="selectedId({{$sem}})" class="border-b cursor-pointer hover:bg-gray-50">
+                    <td class="text-center bg-blue-200">{{$loop->index+1}}</td>
+                    <td>
+                        {{$sem->nom}} | {{$sem->lib}}
+                    </td>
                 </tr>
+                @endforeach
             </table>
         </div>
     </div>

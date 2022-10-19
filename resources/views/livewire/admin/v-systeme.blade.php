@@ -1,7 +1,7 @@
 <div>
     {{-- Nothing in the world is as soft and yielding as water. --}}
-    <div class="grid grid-cols-4 gap-4 px-10">
-        <div class="p-3 bg-white rounded-lg shadow">
+    <div class="flex flex-col gap-2">
+        <div class="p-2 bg-white rounded-lg shadow">
             <h1 class="pb-2 text-xl font-bold border-b">Systeme</h1>
     
             <div class="flex flex-col gap-1 py-2">
@@ -18,16 +18,12 @@
                 </div>
             </div>
         </div>
-        <div class="col-span-3 p-3 bg-white rounded-lg shadow">
-            <h1 class="pb-2 text-xl font-bold border-b">Liste des données</h1>
+        <div class="p-2 bg-white rounded-lg shadow">
+            <h1 class="pb-2 text-xl font-bold border-b">Les systèmes</h1>
             <table class="w-full">
-                <tr class="flex w-full gap-5 py-3 border-b">
-                    <td>Id</td>
-                    <td class="flex-1">Libellé</td>
-                </tr>
                 @foreach ($systemes as $i)
                 <tr wire:click="select({{$i}})" class="flex w-full gap-5 border-b cursor-pointer hover:bg-gray-50">
-                    <td class="">{{ $i->id }}</td>
+                    <td class="px-2 bg-blue-200">{{ $loop->index }}</td>
                     <td class="flex-1">{{ $i->libelle }}</td>
                 </tr>
                 @endforeach

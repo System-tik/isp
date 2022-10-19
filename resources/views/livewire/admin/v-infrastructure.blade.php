@@ -1,6 +1,6 @@
 <div>
     <div class="grid grid-cols-4 gap-4 px-10">
-        <form method="GET" class="p-3 bg-white rounded-lg shadow" enctype="multipart/form-data">
+        <div class="p-3 bg-white rounded-lg shadow" >
             <h1 class="pb-2 text-xl font-bold border-b">Infrastructures</h1>
     
             <div class="flex flex-col gap-1 py-2">
@@ -27,7 +27,7 @@
                     <button wire:click="delete" class="px-2 text-lg text-white bg-red-600">Supprimer</button>
                 </div>
             </div>
-        </form>
+        </div>
         <div class="col-span-3 p-3 bg-white rounded-lg shadow">
             <h1 class="pb-2 text-xl font-bold border-b">Liste des données</h1>
             <table class="w-full">
