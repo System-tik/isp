@@ -29,7 +29,9 @@ class VProgramme extends Component
 
     public function render()
     {
-        $this->programmes = program::all();
+        $this->programmes = program::join('semestres', 'semestres.id', '=','programs.semestre_id')
+                                    ->join('options', 'options.id', '=', 'programs.idoption')
+                                    ->get(['programs.*', 'semestres.nom as s', 'options.nomopt as o']);
         $this->semestres = semestre::all();
         $this->options = option::all();
         return view('livewire.admin.v-programme');

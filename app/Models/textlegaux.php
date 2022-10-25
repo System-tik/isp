@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class textlegaux extends Model
 {
+    protected $fillable = ['titre', 'descrip'];
     use HasFactory;
 }

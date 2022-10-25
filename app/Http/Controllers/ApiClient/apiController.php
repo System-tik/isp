@@ -4,15 +4,19 @@ namespace App\Http\Controllers\ApiClient;
 
 use App\Http\Controllers\Controller;
 use App\Models\about;
+use App\Models\actualite;
 use App\Models\calendrier;
 use App\Models\condition;
 use App\Models\departement;
 use App\Models\frais;
+use App\Models\header;
 use App\Models\insfrastruct;
 use App\Models\program;
+use App\Models\recherchesc;
 use App\Models\section;
 use App\Models\semestre;
 use App\Models\system;
+use App\Models\textlegaux;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -142,6 +146,45 @@ class apiController extends Controller
              return response()->json($th->getMessage());
         }
     }
+    /* get actualites data by API */
+    public function actus()
+    {
+        try {
+            $data=actualite::all();
+            return response()->json($data);
+        } catch (\Exception $th) {
+            return response()->json($th->getMessage());
+        }
+    }
 
-
+    /* get header data by API */
+    public function headers()
+    {
+        try {
+            $data=header::all();
+            return response()->json($data);
+        } catch (\Exception $th) {
+            return response()->json($th->getMessage());
+        }
+    }
+    /* get textes legaux data by API */
+    public function textes()
+    {
+        try {
+            $data=textlegaux::all();
+            return response()->json($data);
+        } catch (\Exception $th) {
+            return response()->json($th->getMessage());
+        }
+    }
+    /* get recherche data by API */
+    public function recher()
+    {
+        try {
+            $data=recherchesc::all();
+            return response()->json($data);
+        } catch (\Exception $th) {
+            return response()->json($th->getMessage());
+        }
+    }
 }

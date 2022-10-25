@@ -1,7 +1,7 @@
 <div>
     {{-- Knowing others is intelligence; knowing yourself is true wisdom. --}}
-    <div class="grid grid-cols-4 gap-4 px-10">
-        <div class="p-3 bg-white rounded-lg shadow">
+    <div class="grid grid-cols-12 gap-4 px-10">
+        <div class="col-span-5 p-3 bg-white rounded-lg shadow lg:col-span-4">
             <h1 class="pb-2 text-xl font-bold border-b">Conditions d'admission</h1>
     
             <div class="flex flex-col gap-5 py-5">
@@ -21,16 +21,16 @@
                 </div>
             </div>
         </div>
-        <div class="col-span-3 p-3 bg-white rounded-lg shadow">
+        <div class="col-span-7 p-3 bg-white rounded-lg shadow lg:col-span-8">
             <h1 class="pb-2 text-xl font-bold border-b">Liste des données</h1>
             <table class="w-full">
-                <tr class="flex w-full gap-6 py-3 border-b">
+                <tr class="text-left border-b">
                     <th>Id</th>
                     <th>Titre</th>
                     <th class="">Description</th>
                 </tr>
                 @foreach ($conditions as $i)
-                <tr wire:click="select({{$i}})" class="flex w-full gap-6 border-b cursor-pointer hover:bg-gray-50">
+                <tr wire:click="select({{$i}})" class="border-b cursor-pointer hover:bg-gray-50">
                     <td class="">{{ $i->id }}</td>
                     <td class="">{{ $i->titre }}</td>
                     <td class="">{{ $i->descrip }}</td>

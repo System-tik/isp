@@ -4,8 +4,6 @@ namespace App\Http\Livewire\Admin;
 
 use App\Models\insfrastruct;
 use Livewire\Component;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 use Livewire\WithFileUploads;
 
 class VInfrastructure extends Component
