@@ -10,36 +10,31 @@
         </div>
         <div class="flex flex-col items-center gap-1" data-aos="flip-down">
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3" >
-                <div >
-                    <FormationCards/>
+                <div v-for="option in options">
+                    <FormationCards :nom='option.nomopt' :descrip='option.description' :id='option.id' />
                 </div>
-                <div >
-                    <FormationCards/>
-                </div>
-                <div >
-                    <FormationCards/>
-                </div>
-                <div >
-                    <FormationCards/>
-                </div>
-                <div >
-                    <FormationCards/>
-                </div>
-                <div >
-                    <FormationCards/>
-                </div>
-              
-            </div>
-           
+            </div>   
         </div>
     </div>
 </template>
 <script>
     import FormationCards from '../components/FormationCards.vue';
+    import axios from 'axios';
     export default{
         name : 'Formation',
         components : {
             FormationCards
+        },
+        data() {
+            return {
+                 options : []
+                
+            }
+        },
+        mounted(){
+            axios
+                .get('http://127.0.0.1:8000/api/option')
+                .then(reponse => this.options = reponse.data)
         }
     }
 </script>

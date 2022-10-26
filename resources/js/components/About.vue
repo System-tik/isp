@@ -11,7 +11,9 @@
                 Institut superieurs et pedagogique
             </div>
             <div class="text-justify text-gray-700 " data-aos="fade-up-right">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum deleniti laborum at voluptatem neque aspernatur unde doloremque temporibus minima? Eius dignissimos quibusdam sapiente quae architecto fuga ab atque provident blanditiis? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error, inventore facilis? Iste eius vero, hic rerum placeat cumque? Recusandae quas sapiente molestiae accusamus quidem corporis cumque aspernatur ipsum harum mollitia!
+                <div>
+                    {{store.abouts.length > 0 ? store.abouts[0]["descrip"] : null}}
+                </div>
             </div>
             <div class="w-40 px-3 py-2 text-sm text-center text-white bg-blue-500 rounded-sm">
                 <router-link to="/about">EN SAVOIR PLUS</router-link>
@@ -20,18 +22,19 @@
     </div>
 </template>
 <script>
+import {store} from '../state/store.js'
     export default {
-        setup(){
-            /* this.$axios.get("http://127.0.0.1:8000/api/about").then((response) => {
-                console.log(response.data)
-            }) */
-        },
-        methods: {
-            getList(){
-                this.$axios.get("http://127.0.0.1:8000/api/about").then((response) => {
-                    console.log(response.data)
-                })
-            }
+      name :'About',
+      data() {
+        return {
+            // abouts : []
+            store
         }
+      },
+      mounted() {
+        // axios
+        //     .get('http://127.0.0.1:8000/api/about')
+        //     .then(reponse => this.abouts.push(reponse.data[0]))
+      },
     }
 </script>

@@ -18,7 +18,7 @@
                     <div class="hidden h-full grid-cols-2 gap-5 px-4 py-10 bg-cover sm:px-8 md:grid lg:gap-14 xl:gap-20 md:px-16 lg:px-32 xl:px-64 2xl:px-80" >
                         <div class="flex flex-col justify-center gap-5 py-20" >
                             <div class="text-gray-500 xl:text-2xl 2xl:text-3xl ">
-                                BIENVENUE !
+                                {{store.abouts.length > 0 ? store.abouts[0]["titre"] : null}}
                             </div>
                             
                             <div class="font-bold text-gray-800 lg:text-2xl xl:text-4xl ">
@@ -65,14 +65,27 @@
             </SplideSlide>
         </Splide>
     </div>
+    <div>
+         <div>
+             {{ }}
+        </div>
+    </div>
 </template>
 
 <script>
     import { Splide, SplideSlide } from '@splidejs/vue-splide';
+    import { store } from '../state/store.js'
     export default ( {
         components: {
             Splide,
             SplideSlide,
         },
+        data(){
+            return {
+                store
+            }
+        },
+       
     } );
+
 </script>

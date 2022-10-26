@@ -231,5 +231,16 @@
             </div>
         </div>
     </div>
+    
 
 </template>
+<script>
+import {store} from '../state/store.js'
+export default {
+    data(){
+        return{
+            store
+        }
+    }
+}
+</script>

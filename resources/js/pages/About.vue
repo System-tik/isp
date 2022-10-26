@@ -17,27 +17,19 @@
         </div>
         <div class="grid-cols-4 col-span-4 gap-5 sm:grid">
             <div class="col-span-2">
-                <h4 class="mb-4 font-medium text-gray-900">Présentation</h4>
+                <h4 class="mb-4 font-medium text-gray-900">
+                    {{store.abouts.length > 0 ? store.abouts[3]["titre"] : null}}
+                </h4>
                 <p class="text-justify text-gray-700">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias necessitatibus quas possimus consequatur quo laudantium 
-                    aperiam facere hic at quasi dicta voluptatum magni rem, atque eveniet voluptatibus accusamus alias rerum.
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias necessitatibus quas possimus consequatur quo
-                    laudantium
-                    aperiam facere hic at quasi dicta voluptatum magni rem, atque eveniet voluptatibus accusamus alias rerum.
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias necessitatibus quas possimus consequatur quo
-                    laudantium
-                    aperiam facere hic at quasi dicta voluptatum magni rem, atque eveniet voluptatibus accusamus alias rerum.
+                    {{store.abouts.length > 0 ? store.abouts[3]["descrip"] : null}}
                 </p>
             </div>
             <div class="col-span-2 mt-4 sm:mt-0">
-                <h4 class="mb-4 font-medium text-gray-900">Historique</h4>
+                <h4 class="mb-4 font-medium text-gray-900">
+                    {{store.abouts.length > 0 ? store.abouts[0]["titre"] : null}}
+                </h4>
                 <p class="text-justify text-gray-700">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias necessitatibus quas possimus consequatur quo
-                    laudantium
-                    aperiam facere hic at quasi dicta voluptatum magni rem, atque eveniet voluptatibus accusamus alias rerum.
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias necessitatibus quas possimus consequatur quo
-                    laudantium
-                    aperiam facere hic at quasi dicta voluptatum magni rem, atque eveniet voluptatibus accusamus alias rerum.
+                    {{store.abouts.length > 0 ? store.abouts[0]["descrip"] : null}}
                 </p>
             </div>
 
@@ -64,7 +56,7 @@
 
     <!-- Notre pedagogie -->
     <!-- <hr class="bg-gray-900"/> -->
-    <div class="flex flex-col items-center justify-center px-4 py-12 lg:px-32 sm:px-8 md:px-16 xl:px-40 2xl:px-80" style="background-image: url('img/blob1.svg');background-repeat: no-repeat;background-position-x: 300px;">
+    <div class="flex flex-col items-center justify-center px-4 py-12 lg:px-32 sm:px-8 md:px-16 xl:px-40 2xl:px-80" style="background-image:url('img/blob1.svg') ; background-repeat: no-repeat;background-position-x: 300px;">
         <div class="">
             <h4 class="text-sm font-semibold" style="color:#fbc766">L'Education est une Puissance</h4>
         </div>
@@ -115,3 +107,20 @@
     </div>
 
 </template>
+<script>
+import {store} from '../state/store.js'
+    export default {
+      name :'About',
+      data() {
+        return {
+            store
+            // results :[]
+        }
+      },
+        created(){
+        // axios
+        //     .get('http://127.0.0.1:8000/api/about')
+        //     .then(reponse =>this.results=reponse.data)
+      }
+    }
+</script>

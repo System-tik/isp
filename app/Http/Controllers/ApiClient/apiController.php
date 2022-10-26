@@ -13,6 +13,7 @@ use App\Models\program;
 use App\Models\section;
 use App\Models\semestre;
 use App\Models\system;
+use App\Models\option;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -86,7 +87,7 @@ class apiController extends Controller
     public function option()
     {
         try {
-            $options=insfrastruct::all();
+            $options=option::all();
  
             return response()->json($options);
  
