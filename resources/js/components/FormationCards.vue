@@ -8,11 +8,13 @@
             </div>
             <div>
                 <h1 class="text-lg text-center text-blue-800">
-                    Formation en technologie
+                    {{nom}}
                 </h1>
             </div>
-            <div class="text-center text-gray-500 text-md">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus suscipit fugiat atque mollitia dolorum molestiae
+            <div class="text-center text-gray-500 text-md w-full">
+                <p class="w-full text-center">
+                    {{descrip}}
+                </p>
             </div>
             <div class="w-40 px-3 py-2 mt-2 text-center text-blue-600 rounded-md cursor-pointer bg-blue-50">
                 En savoir plus
@@ -22,3 +24,8 @@
         <div class="button__vertical"></div>
     </div>
 </template>
+<script>
+    export default {
+        props : ['nom','descrip','id']
+    }
+</script>

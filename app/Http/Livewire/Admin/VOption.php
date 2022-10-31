@@ -53,6 +53,7 @@ class VOption extends Component
         $this->nomopt = "";
         $this->description = "";
         $this->iddep = "";
+        $this->selectedId = "";
     }
 
     public function selectedId($donnees)
@@ -67,9 +68,8 @@ class VOption extends Component
     {
         $validate = $this->validate([
             'nomopt' => 'required',
-            'decription' => 'required',
+            'description' => 'required',
             'iddep' => 'required',
-            'selectedId' => 'required'
         ]);
 
         try {

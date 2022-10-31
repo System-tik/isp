@@ -16,6 +16,7 @@ use App\Models\recherchesc;
 use App\Models\section;
 use App\Models\semestre;
 use App\Models\system;
+use App\Models\option;
 use App\Models\textlegaux;
 
 class apiController extends Controller
@@ -87,7 +88,7 @@ class apiController extends Controller
     public function option()
     {
         try {
-            $options=insfrastruct::all();
+            $options=option::all();
  
             return response()->json($options);
  
