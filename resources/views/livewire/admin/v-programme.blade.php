@@ -1,12 +1,13 @@
 <div>
-    <div class="grid grid-cols-4 gap-4 px-10">
-        <div class="p-3 bg-white rounded-lg shadow">
+    <div class="grid grid-cols-12 gap-4 px-10">
+        <div class="col-span-5 p-3 bg-white rounded-lg shadow lg:col-span-4">
             <h1 class="pb-2 text-xl font-bold border-b">Programme</h1>
     
             <div class="flex flex-col gap-1 py-2">
                 <div class="flex flex-col">
                     <label for="" class="py-1">Option</label>
                     <select name="" id="" wire:model="idoption">
+                        <option>Choisir l'option</option>
                         @foreach ($options as $idopt)
                         <option value="{{ $idopt->id }}">{{ $idopt->nomopt }}</option>
                         @endforeach
@@ -15,6 +16,7 @@
                 <div class="flex flex-col">
                     <label for="" class="py-1">Semestre</label>
                     <select name="" id="" wire:model="semestre_id">
+                        <option>Choisir le semestre</option>
                         @foreach ($semestres as $sem)
                         <option value="{{ $sem->id }}">{{ $sem->nom }}</option>
                         @endforeach
@@ -41,15 +43,29 @@
                 </div>
             </div>
         </div>
-        <div class="col-span-3 p-3 bg-white rounded-lg shadow">
+        <div class="col-span-7 p-3 bg-white rounded-lg shadow lg:col-span-8">
             <h1 class="pb-2 text-xl font-bold border-b">Liste des données</h1>
             <table class="w-full">
-                @foreach ($programmes as $pgrm)    
-                <tr class="py-3 border-b">
-                   <td>{{$pgrm->nomcours}}</td>
-                   <td>kfjfj</td>
-                </tr>
-                @endforeach
+                <thead>
+                    <tr class="py-3 text-xs text-left border-b lg:text-sm">
+                        <th>Intitulé du cours</th>
+                        <th>Nombre de crédit</th>
+                        <th>Semestre</th>
+                        <th>Option</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach ($programmes as $pgrm)    
+                    <tr class="py-3 text-xs border-b lg:text-sm">
+                        <td>{{$pgrm->nomCours}}</td>
+                        <td>{{$pgrm->credit}}</td>
+                        <td>{{$pgrm->s}}</td>
+                        <td>{{$pgrm->o}}</td>
+                    </tr>
+                    @endforeach
+                </tbody>
+                
             </table>
         </div>
     </div>

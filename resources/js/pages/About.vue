@@ -18,10 +18,10 @@
         <div class="grid-cols-4 col-span-4 gap-5 sm:grid">
             <div class="col-span-2">
                 <h4 class="mb-4 font-medium text-gray-900">
-                    {{store.abouts.length > 0 ? store.abouts[3]["titre"] : null}}
+                    {{store.abouts.length > 0 ? store.abouts[1]["titre"] : null}}
                 </h4>
                 <p class="text-justify text-gray-700">
-                    {{store.abouts.length > 0 ? store.abouts[3]["descrip"] : null}}
+                    {{store.abouts.length > 0 ? store.abouts[1]["descrip"] : null}}
                 </p>
             </div>
             <div class="col-span-2 mt-4 sm:mt-0">
@@ -56,7 +56,7 @@
 
     <!-- Notre pedagogie -->
     <!-- <hr class="bg-gray-900"/> -->
-    <div class="flex flex-col items-center justify-center px-4 py-12 lg:px-32 sm:px-8 md:px-16 xl:px-40 2xl:px-80" style="background-image:url('img/blob1.svg') ; background-repeat: no-repeat;background-position-x: 300px;">
+    <div class="flex flex-col items-center justify-center px-4 py-12 lg:px-32 sm:px-8 md:px-16 xl:px-40 2xl:px-80" style="background-image: url('img/blob1.svg') ; background-repeat: no-repeat;background-position-x: 300px;">
         <div class="">
             <h4 class="text-sm font-semibold" style="color:#fbc766">L'Education est une Puissance</h4>
         </div>

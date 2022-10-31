@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('calendriers', function (Blueprint $table) {
             $table->id();
             $table->string('activite');
-            $table->string('descrip')->nullable();
+            $table->text('descrip')->nullable();
             $table->date('debut');
             $table->date('fin');
             $table->timestamps();

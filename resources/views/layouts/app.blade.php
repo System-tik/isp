@@ -32,12 +32,19 @@
     </head>
     <body class="m-0 font-sans text-base antialiased font-normal dark:bg-slate-900 leading-default bg-gray-50 text-slate-500" 
         x-data="{
-            menu:[false,false,false,false,false, false, false, false, false, false, false, false, false, true, ],
+            menu:[true,false,false,false,false, false, false, false, false, false, false, false, false, false, ],
             afficher(b){
                 this.menu[b] = true 
                 for(var i = 0;i < this.menu.length; i++){
                     if(i != b) this.menu[i] = false
                 }
+            },
+            alert_open:false, 
+            type : [false, false, false], 
+            show_alert(i){
+                for(let x = 0; x < this.type.length; x++) this.type[x] = false
+                this.type[i] = true;
+                this.alert_open = true
             }
         }">
         {{-- <div class="min-h-screen bg-gray-100">

@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class header extends Model
 {
+    protected $fillable = ['titre', 'sous', 'descrip'];
     use HasFactory;
 }

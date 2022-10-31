@@ -18,7 +18,7 @@ class VFrais extends Component
 
     public function render()
     {
-        $this->fraiss=frais::all();
+        $this->fraiss=frais::join('niveaux', 'niveaux.id', '=', 'frais.niveau_id')->get('*');
         $this->niveaux=niveau::all();
         /* $this->systemes=niveau::all(); */
         return view('livewire.admin.v-frais');

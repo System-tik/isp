@@ -16,6 +16,8 @@
                 Annee academique 2022-2023
             </div>
         </div>
+
+        
         <div>
             <div class="py-8 text-gray-600 text-md sm:text-xl">
                 1. INFORMATIQUE ET TECHNOLOGIE
@@ -52,3 +54,13 @@
         </div>
     </div>
 </template>
+<script>
+import {store} from '../state/store.js'
+export default {
+    data() {
+        return {
+            store
+        }
+    },
+}
+</script>

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->integer('idoption');
             $table->string('nomCours');
-            $table->string('descrip');
+            $table->text('descrip');
             $table->integer('credit');
             $table->integer('semestre_id');
             $table->timestamps();

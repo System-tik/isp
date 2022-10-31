@@ -16,52 +16,58 @@
                 Annee academique 2022-2023
             </div>
         </div>
-        <div>
-            <div class="py-8 text-gray-600 text-md sm:text-xl">
-                1. INFORMATIQUE ET TECHNOLOGIE
+        <div v-for="option in store.options">
+            <div>
+                <div class="py-8 text-gray-600 text-md sm:text-xl">
+                    {{store.options.length > 0 ? option["nomopt"] : null}}
+                </div>
             </div>
             <div class="flex flex-col gap-1 ">
                 <div class="grid grid-cols-12 px-5 py-2 " style="background-color:#f4f6ff;">
                     <div class="col-span-6 text-xs text-gray-600 sm:text-lg">
                         CLASSE DE RECRUTEMENT
                     </div>
-                    <div class="col-span-3 text-xs font-bold text-gray-600 sm:text-md">
+                    <!-- <div class="col-span-3 text-xs font-bold text-gray-600 sm:text-md">
                         ETUDIANT NT
-                    </div>
+                    </div> -->
                     <div class="col-span-3 text-xs font-bold text-gray-600 sm:text-md">
                         ETUDIANT EXP
                     </div>
                 </div>
-                <div class="grid grid-cols-12 px-5 py-2 " style="background-color:#f4f6ff;">
-                    <div class="col-span-3 col-start-7 text-xs text-gray-600 sm:text-md">
-                        580$
+                <div v-for="frai in store.frais">
+                    <div class="grid grid-cols-12 px-5 py-2 " style="background-color:#f4f6ff;">
+                        <!-- Le montant par rapport au niveau -->
+                        <div class="col-span-3 col-start-7 text-xs text-gray-600 sm:text-md">
+                            {{store.frais.length > 0 ? frai["montant"] : null}}
+                        </div>
+                        <!-- <div class="col-span-3 text-xs text-gray-600 sm:text-md">
+                            800$
+                        </div> -->
                     </div>
-                    <div class="col-span-3 text-xs text-gray-600 sm:text-md">
-                        800$
+                    <!-- Le niveau par rapport à chaque montant -->
+                    <div class="w-full px-5 py-2 " style="background-color:#f4f6ff;">
+                        <div class="col-span-6 text-xs text-gray-600 sm:text-lg">
+                            {{store.frais.length > 0 ? frai["niveau_id"] : null}}
+                        </div>
                     </div>
                 </div>
-                <div class="w-full px-5 py-2 " style="background-color:#f4f6ff;">
-                    <div class="col-span-6 text-xs text-gray-600 sm:text-lg">
-                        CLASSE MONTANTE
-                    </div>
-                </div>
-                <div class="grid grid-cols-12 px-5 py-2 " style="background-color:#f4f6ff;">
+                <!-- <div class="grid grid-cols-12 px-5 py-2 " style="background-color:#f4f6ff;" v-for="frai in store.frais">
                     <div class="col-span-6 px-10 text-sm text-gray-600 sm:text-lg">
                         L2
                     </div>
                     <div class="col-span-3 text-xs text-gray-600 sm:text-md">
-                        556$
+                       L4
                     </div>
                     <div class="col-span-3 text-xs text-gray-600 sm:text-md">
                         1280$
                     </div>
-                </div>
-                <div class="grid grid-cols-12 px-5 py-2 " style="background-color:#f4f6ff;">
+                </div> -->
+                <!-- <div class="grid grid-cols-12 px-5 py-2 " style="background-color:#f4f6ff;">
                     <div class="col-span-6 px-10 text-sm text-gray-600 sm:text-lg">
                         L3
                     </div>
                     <div class="col-span-3 text-xs text-gray-600 sm:text-md">
-                        450$
+                        450$    
                     </div>
                     <div class="col-span-3 text-xs text-gray-600 sm:text-md">
                         1000$
@@ -77,10 +83,10 @@
                     <div class="col-span-3 text-xs text-gray-600 sm:text-md">
                         1400$
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
-        <div>
+        <!-- <div>
             <div class="py-8 text-gray-600 text-md sm:text-xl">
                 2. ANGLAIS
             </div>
@@ -229,7 +235,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
     
 

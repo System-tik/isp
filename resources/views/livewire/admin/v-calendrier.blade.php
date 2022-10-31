@@ -1,7 +1,7 @@
 <div>
     {{-- In work, do what you enjoy. --}}
-    <div class="grid grid-cols-4 gap-4 px-10">
-        <div class="p-3 bg-white rounded-lg shadow">
+    <div class="grid grid-cols-12 gap-4 px-10">
+        <div class="col-span-5 p-3 bg-white rounded-lg shadow lg:col-span-4">
             <h1 class="pb-2 text-xl font-bold border-b">Calendrier</h1>
     
             <div class="flex flex-col gap-1 py-2">
@@ -11,7 +11,7 @@
                 </div>
                 <div class="flex flex-col">
                     <label for="" class="">Description</label>
-                    <textarea wire:model="descrip" type="text" class="w-full border-gray-200 rounded h-20"></textarea>
+                    <textarea wire:model="descrip" type="text" class="w-full h-20 border-gray-200 rounded"></textarea>
                 </div>
                 <div class="flex flex-col">
                     <label for="" class="">Début</label>
@@ -29,10 +29,10 @@
                 </div>
             </div>
         </div>
-        <div class="col-span-3 p-3 bg-white rounded-lg shadow">
+        <div class="col-span-7 p-3 bg-white rounded-lg shadow lg:col-span-8">
             <h1 class="pb-2 text-xl font-bold border-b">Liste des données</h1>
             <table class="w-full">
-                <tr class="flex w-full gap-12 py-3 border-b">
+                <tr class="grid w-full grid-cols-5 py-3 text-xs border-b lg:text-sm lg:gap-4 ">
                     <td>Id</td>
                     <td class="">Activité</td>
                     <td class="">Description</td>
@@ -40,7 +40,7 @@
                     <td class="flex-1">Fin</td>
                 </tr>
                 @foreach ($calendriers as $i)
-                <tr wire:click="select({{$i}})" class="flex w-full gap-14 border-b cursor-pointer hover:bg-gray-50">
+                <tr wire:click="select({{$i}})" class="grid w-full grid-cols-5 text-xs border-b cursor-pointer lg:text-sm lg:gap-4 hover:bg-gray-50">
                     <td class="">{{ $i->id }}</td>
                     <td class="">{{ $i->activite }}</td>
                     <td class="">{{ $i->descrip }}</td>

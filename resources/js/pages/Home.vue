@@ -1,6 +1,5 @@
 <template>
-    <div>
-        
+    <div>    
         <Header/>
         <About/>
         <Formation/>
@@ -33,10 +32,13 @@ export default{
     },
     mounted(){
         store.getAbouts()
-        // console.log(store.abouts ? store.abouts : 1);
-        // axios
-        //      .get('http://127.0.0.1:8000/api/about')
-        //      .then(reponse => console.log(reponse.data))
+        store.getHeaders()
+        store.getActus()
+        store.getTextes()
+        store.getConditions()
+        store.getPrograms()
+        store.getOptions()
+        store.getFrais()
     }
 
 }
