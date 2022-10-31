@@ -58,6 +58,7 @@
                     <div class="flex flex-col w-56 gap-1 px-5 py-5 text-base shadow-xl bg-gray-50">
                         <router-link to="/about" class="px-4 py-2 transition duration-500 transform border-b hover:bg-blue-600 hover:text-white">Presentation ISP</router-link>
                         <router-link to="/texteLegaux" class="px-4 py-2 transition duration-500 transform border-b hover:bg-blue-600 hover:text-white">Textes legaux</router-link>
+                        <router-link to="/Calendrier" class="px-4 py-2 transition duration-500 transform border-b hover:bg-blue-600 hover:text-white">Calendrier</router-link>
                     </div>
                 </div>
             </div> 

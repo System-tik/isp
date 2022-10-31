@@ -8,6 +8,7 @@ import Frais from '../pages/Frais.vue';
 import About from '../pages/About.vue';
 import DetailsActu from '../pages/DetailsActu.vue';
 import texteLegaux from '../pages/texteLegaux.vue'
+import Calendrier from '../pages/Calendrier.vue'
 
 const routes = [
     {
@@ -49,7 +50,12 @@ const routes = [
         name : 'Texte Legaux',
         path : '/texteLegaux',
         component : texteLegaux
-    }  
+    }, 
+    {
+        name : 'Calendrier',
+        path : '/Calendrier',
+        component : Calendrier
+    }
 ];
 
 const router = createRouter({

@@ -17,8 +17,6 @@ use App\Models\section;
 use App\Models\semestre;
 use App\Models\system;
 use App\Models\textlegaux;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
 
 class apiController extends Controller
 {
@@ -54,9 +52,8 @@ class apiController extends Controller
     }
     public function departement(){
         try {
-           $departements=departement::all();
-
-           return response()->json($departements);
+            $departements=departement::all();
+            return response()->json($departements);
 
         } catch (\Exception $th) {
             return response()->json($th->getMessage());
@@ -127,11 +124,11 @@ class apiController extends Controller
     {
         try {
             $semestres=semestre::all();
- 
+
             return response()->json($semestres);
- 
+
         } catch (\Exception $th) {
-             return response()->json($th->getMessage());
+            return response()->json($th->getMessage());
         }
     }
 
@@ -139,11 +136,9 @@ class apiController extends Controller
     {
         try {
             $systems=system::all();
- 
             return response()->json($systems);
- 
         } catch (\Exception $th) {
-             return response()->json($th->getMessage());
+            return response()->json($th->getMessage());
         }
     }
     /* get actualites data by API */
