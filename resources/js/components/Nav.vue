@@ -18,7 +18,7 @@
                         <span class="animate__animated animate__rotateIn">X</span>
                     </div>
     
-                    <div class=" flex flex-col gap-1 text-xl text-gray-300">
+                    <div class="flex flex-col gap-1 text-xl text-gray-300 ">
                         <div class="px-5 py-2 border-b border-gray-800">
                             <router-link  to="/">Accueil</router-link>
                         </div>
@@ -81,8 +81,8 @@
                 <div class=" dropdown-content">
                     <div class="py-2"></div>
                     <div class="flex flex-col w-56 gap-1 px-5 py-5 text-base shadow-xl bg-gray-50">
-                        <router-link to="/about" class="px-4 py-2 transition duration-500 transform border-b hover:bg-blue-600 hover:text-white">Articles</router-link>
-                        <router-link to="/texteLegaux" class="px-4 py-2 transition duration-500 transform border-b hover:bg-blue-600 hover:text-white">Mémoires</router-link>
+                        <router-link to="/Recherche/1" class="px-4 py-2 transition duration-500 transform border-b hover:bg-blue-600 hover:text-white">Articles</router-link>
+                        <router-link to="/Recherche/2" class="px-4 py-2 transition duration-500 transform border-b hover:bg-blue-600 hover:text-white">Mémoires</router-link>
                     </div>
                 </div>
             </div> 

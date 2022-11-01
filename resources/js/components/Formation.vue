@@ -9,32 +9,43 @@
             </div>
         </div>
         <div class="flex flex-col items-center gap-1" data-aos="flip-down">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3" >
-                <div v-for="option in options">
-                    <FormationCards :nom='option.nomopt' :descrip='option.description' :id='option.id' />
-                </div>
-            </div>   
+            <Splide  :options="{
+                    perPage:1,
+                    rewind: true,
+                    gap   : '1rem',
+                    autoplay : true,
+                    loop : true,
+                }" class="w-full mb-5 md:flex-row">
+                <SplideSlide v-for="section in store.sections" :key="section.id">
+                    <div class="px-5">
+                        <h1 class="py-10 text-xl text-slate-500">Section : {{section.nomsec}}</h1>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3" >
+                            <div v-for="option in store.options" :key="option.id">
+                                <FormationCards v-if="option.idsec == section.id" :nom='option.nomopt' :descrip='option.description' :id='option.id' />
+                            </div>
+                        </div>   
+                    </div>
+                </SplideSlide>
+
+            </Splide>
         </div>
     </div>
 </template>
 <script>
     import FormationCards from '../components/FormationCards.vue';
-    import axios from 'axios';
+    import {store} from '../state/store.js'
     export default{
         name : 'Formation',
         components : {
             FormationCards
         },
-        data() {
+        data(){
             return {
-                 options : []
-                
+                store
             }
         },
         mounted(){
-            axios
-                .get('http://127.0.0.1:8000/api/option')
-                .then(reponse => this.options = reponse.data)
+            
         }
     }
 </script>

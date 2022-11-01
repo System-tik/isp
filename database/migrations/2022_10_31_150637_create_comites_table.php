@@ -13,11 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('frais', function (Blueprint $table) {
+        Schema::create('comites', function (Blueprint $table) {
             $table->id();
-            $table->double('montant');
-            $table->integer('option_id');
-            $table->integer('niveau_id');
+            $table->string('titre');
+            $table->string('niveau');
+            $table->string('noms');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('frais');
+        Schema::dropIfExists('comites');
     }
 };

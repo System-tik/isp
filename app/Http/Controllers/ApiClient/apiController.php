@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\about;
 use App\Models\actualite;
 use App\Models\calendrier;
+use App\Models\comite;
 use App\Models\condition;
 use App\Models\departement;
 use App\Models\frais;
@@ -64,7 +65,7 @@ class apiController extends Controller
     public function frais()
     {
         try {
-            $frais=frais::all();
+            $frais=frais::join('niveaux', 'niveaux.id', '=', 'frais.niveau_id')->join('options', 'options.id', '=', 'frais.option_id')->get('*');
  
             return response()->json($frais);
  
@@ -88,7 +89,7 @@ class apiController extends Controller
     public function option()
     {
         try {
-            $options=option::all();
+            $options=option::join('departements', 'departements.id', '=', 'options.iddep')->get('*');
  
             return response()->json($options);
  
@@ -100,7 +101,9 @@ class apiController extends Controller
     public function program()
     {
         try {
-            $programmes=program::all();
+            $programmes=program::join('semestres', 'semestres.id', '=','programs.semestre_id')
+            ->join('options', 'options.id', '=', 'programs.idoption')
+            ->get(['programs.*', 'semestres.nom as semestre', 'options.nomopt as option']); 
  
             return response()->json($programmes);
  
@@ -178,6 +181,15 @@ class apiController extends Controller
     {
         try {
             $data=recherchesc::all();
+            return response()->json($data);
+        } catch (\Exception $th) {
+            return response()->json($th->getMessage());
+        }
+    }
+    public function comites()
+    {
+        try {
+            $data=comite::all();
             return response()->json($data);
         } catch (\Exception $th) {
             return response()->json($th->getMessage());

@@ -74,6 +74,9 @@ class VInfrastructure extends Component
         try {
             $record = insfrastruct::find($this->selectedId);
             $record->update($validate);
+            if(!empty($this->photo)){
+                $this->photo->storePubliclyAs('public/gallerie/', $record->id.'.png');
+            }
             $this->clear();
             $this->dispatchBrowserEvent('confirm', ['message' => 'infrastructure modifié!']);
             $this->emit('insfractruct');

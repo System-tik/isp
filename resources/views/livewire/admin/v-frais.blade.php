@@ -13,6 +13,15 @@
                     <input wire:model="montant" type="text" class="w-full border-gray-200 rounded">
                 </div>
                 <div class="flex flex-col">
+                    <label for="" class="py-1">Option</label>
+                    <select name="" id="" wire:model="option_id">
+                        <option>Choisir l'option</option>
+                        @foreach ($options as $op)
+                        <option value="{{ $op->id }}">{{ $op->nomopt }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="flex flex-col">
                     <label for="" class="py-1">Niveau</label>
                     <select name="" id="" wire:model="niveau_id">
                         <option>Choisir le niveau</option>
@@ -45,6 +54,7 @@
                     <td class="">{{ $loop->index + 1 }}</td>
                     {{-- <td class="">{{ $i->type }}</td> --}}
                     <td class="">{{ $i->lib }}</td>
+                    <td class="">{{ $i->nomopt }}</td>
                     <td class="">{{ $i->montant }}</td>
                 </tr>
                 @endforeach

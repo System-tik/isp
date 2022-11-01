@@ -36,7 +36,7 @@
                 </tr> --}}
                 @foreach ($infrastructures as $i)
                 <div wire:click="selectedId({{$i}})" class="flex flex-col w-full col-span-6 p-1 text-justify border-b rounded shadow cursor-pointer xl:col-span-4 2xl:col-span-3 hover:bg-gray-50">
-                    <img src="{{asset('storage/gallerie/'.$i->id.'.png')}}" alt="" srcset="">
+                    <img src="{{asset('storage/gallerie/'.$i->id.'.png')}}?{{rand()}}" alt="" srcset="">
                     <p class="text-lg font-bold">{{ $i->nombatiment }}</p>
                     <p class="">{{ $i->descrip }}</p>
                 </div>

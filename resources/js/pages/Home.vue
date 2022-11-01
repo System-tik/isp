@@ -39,6 +39,10 @@ export default{
         store.getPrograms()
         store.getOptions()
         store.getFrais()
+        store.getSection()
+        store.getOptions()
+        store.getGallerie()
+        store.getComite()
     }
 
 }

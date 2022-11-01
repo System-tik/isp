@@ -5,7 +5,7 @@
 >
     <div class="flex gap-2 px-10">
         <div class="p-2 bg-white rounded-lg shadow">
-            <h1 class="pb-2 text-xl font-bold border-b">Info de l'entête</h1>
+            <h1 class="pb-2 text-xl font-bold border-b">Comité de gestion de l'ISP</h1>
     
             <div class="flex flex-col gap-1 py-2">
                 <div class="flex flex-col">
@@ -13,12 +13,12 @@
                     <input wire:model="titre" type="text" class="w-full border-gray-200 rounded">
                 </div>
                 <div class="flex flex-col">
-                    <label for="" class="py-1">Sous titre</label>
-                    <input wire:model="sous" type="text" class="w-full border-gray-200 rounded">
+                    <label for="" class="py-1">niveau titre</label>
+                    <input wire:model="niveau" type="text" class="w-full border-gray-200 rounded">
                 </div>
                 <div class="flex flex-col">
-                    <label for="" class="py-1">Description</label>
-                    <textarea wire:model="descrip" class="w-full border-gray-200 rounded" rows="5"></textarea>
+                    <label for="" class="py-1">Nom complet</label>
+                    <input wire:model="noms" type="text" class="w-full border-gray-200 rounded" >
                 </div>
                 <div class="flex flex-col">
                     <label for="" class="py-1">Image</label>
@@ -39,12 +39,12 @@
                 {{-- <tr class="flex w-full gap-2 py-3 border-b">
                     <td class="flex-1">Nom section</td>
                 </tr> --}}
-                @foreach ($headers as $i)
+                @foreach ($comites as $i)
                 <div wire:click="selectedId({{$i}})" class="flex flex-col col-span-6 p-1 text-justify border-b rounded shadow cursor-pointer 2xl:col-span-3 xl:col-span-4 hover:bg-gray-50">
-                    <img src="{{asset('storage/header/'.$i->id.'.svg')}}" alt="" srcset="" class="">
+                    <img src="{{asset('storage/comite/'.$i->id.'.png')}}" alt="" srcset="" class="">
                     <p class="text-lg font-bold">{{ $i->titre }}</p>
-                    <p class="">{{ $i->sous }}</p>
-                    <p class="">{{ $i->descrip }}</p>
+                    <p class="">{{ $i->niveau }}</p>
+                    <p class="">{{ $i->noms }}</p>
                 </div>
                 @endforeach
             </div>

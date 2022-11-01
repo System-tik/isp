@@ -35,6 +35,7 @@ Route::get('/actus',[apiController::class,'actus']);
 Route::get('/headers',[apiController::class,'headers']);
 Route::get('/textes',[apiController::class,'textes']);
 Route::get('/recherche',[apiController::class,'recher']);
+Route::get('/comites',[apiController::class,'comites']);
 
 
 

@@ -68,7 +68,7 @@ export const store = reactive({
     programs : [],
     getPrograms(){
         axios
-            .get('http://127.0.0.1.8000/api/program')
+            .get('http://127.0.0.1:8000/api/program')
             .then(reponse => this.programs = reponse.data)
     },
     // Frais
@@ -77,6 +77,30 @@ export const store = reactive({
         axios
             .get('http://127.0.0.1:8000/api/frais')
             .then(reponse => this.frais = reponse.data)
-    }
+    },
+
+    //Sections
+    sections: [],
+    getSection(){
+        axios
+            .get('http://127.0.0.1:8000/api/section')
+            .then(reponse => this.sections = reponse.data)
+    },
+
+    //infrastructure
+    galleries:[],
+    getGallerie(){
+        axios
+            .get('http://127.0.0.1:8000/api/infrastructure')
+            .then(reponse => this.galleries = reponse.data)
+    },
+
+    //COMITE
+    comites:[],
+    getComite(){
+        axios
+            .get('http://127.0.0.1:8000/api/comites')
+            .then(reponse => this.comites = reponse.data)
+    },
 
 })

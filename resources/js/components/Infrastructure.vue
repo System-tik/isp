@@ -9,19 +9,19 @@
             <div class="pb-10 text-sm text-center text-gray-500 ">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
             </div>
-            <div data-aos="zoom-in-up" class="w-full ">
+            <div data-aos="zoom-in-up" class="w-full">
                 <Splide  :options="{
                     perPage:2,
                     rewind: true,
                     gap   : '1rem',
                     autoplay : true,
                     loop : true,
-                }" class="flex flex-col justify-center w-full mb-5 md:flex-row"> 
-                    <SplideSlide>
-                        <div class="image" @click="VoirPhoto()">
+                }" class="w-full mb-5 md:flex-row"> 
+                    <SplideSlide v-for="gallerie in store.galleries" :key="gallerie.id">
+                        <div class=" image" @click="VoirPhoto()">
                             
-                            <img src="/img/deux.jpg" alt="" class="w-full h-72" id="photo1">
-                            <h1 class="text-lg text-center text-gray-500" id="photo2">Home</h1>
+                            <img :src="'/storage/gallerie/'+gallerie['id']+'.png'" alt="" class="w-full rounded-lg h-72" id="photo1">
+                            <h1 class="text-lg text-center text-gray-500 " id="photo2">{{gallerie["nombatiment"]}}</h1>
                         </div>
                     </SplideSlide> 
                 </Splide>
@@ -29,12 +29,7 @@
         </div>
         <!-- <div @click="results()">
             voir
-        </div> -->
-        <div>
-            <ul>
-                <li v-for="tableau in tableaux"> {{tableau.nomopt }} </li>
-            </ul>
-        </div>        
+        </div> -->     
     </div>
 </template>
 <script>

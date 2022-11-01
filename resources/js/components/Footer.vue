@@ -1,4 +1,4 @@
-<template>
+<template class="flex flex-col justify-between f">
     <div class="flex flex-col items-center justify-center gap-5 px-4 py-10 bg-gray-900 md:py-20 sm:gap-32 sm:flex-row sm:px-8 md:px-16 lg:px-32 xl:px-64 2xl:px-80">
         <div class="text-sm text-white lg:text-md ">
             <h1 class="py-1 font-bold text-center sm:text-left ms:justify-start text-md lg:text-lg xl:text-xl">

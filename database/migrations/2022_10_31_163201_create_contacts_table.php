@@ -13,11 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('frais', function (Blueprint $table) {
+        Schema::create('contacts', function (Blueprint $table) {
             $table->id();
-            $table->double('montant');
-            $table->integer('option_id');
-            $table->integer('niveau_id');
+            $table->string('type');//reseau/ tel/ email/ autres
+            $table->string('contenu');
+            $table->text('icon');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('frais');
+        Schema::dropIfExists('contacts');
     }
 };

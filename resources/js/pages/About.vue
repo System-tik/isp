@@ -11,7 +11,7 @@
     <!-- Presentation ISP -->
     <div class="grid-cols-6 gap-8 px-4 mt-10 mb-10 lg:grid lg:px-32 sm:px-8 md:px-16 xl:px-40 2xl:px-80">
         <div class="hidden col-span-2 lg:grid">
-            <img src="img/etu2.jpg" class="h-64 border rounded" alt="" srcset="">
+            <img :src="'/storage/gallerie/'+store.galleries[0]['id']+'.png'" class="border rounded" alt="" srcset="">
             <h5 class="mt-2 text-sm font-medium text-center">Directeur Général</h5>
             <p class="text-sm text-center">Professeur en Chimie</p>
         </div>
@@ -40,14 +40,14 @@
     <div class="gap-6 px-4 py-10 mt-10 sm:flex lg:px-32 sm:px-8 md:px-16 xl:px-40 2xl:px-80" style="background-color:#f8fafc">
         <div class="basis-1/2">
             <h4 class="mb-5 text-sm font-semibold" style="color:#fbc766;">Garantie du succès</h4>
-            <h4 class="text-lg font-bold text-gray-900 md:text-2xl">Pourquoi étudier chez nous ?</h4>
-            <p class="mt-4 text-justify text-gray-500 text-md">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero facilis animi</p>
-            <div class="mt-5 text-justify text-gray-500">
+            <h4 class="text-lg font-bold text-gray-900 md:text-2xl">{{store.abouts[2]['titre']}}</h4>
+            <p class="mt-4 text-justify text-gray-500 text-md">{{store.abouts[3]['descrip']}}</p>
+            <!-- <div class="mt-5 text-justify text-gray-500">
                 <p><span class="font-bold text-blue-600">- </span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 <p><span class="font-bold text-blue-600">- </span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 <p><span class="font-bold text-blue-600">- </span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 <p><span class="font-bold text-blue-600">- </span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </div>
+            </div> -->
         </div>
         <div class="flex items-center justify-center basis-1/2">
             <img src="img/deux.jpg" alt="" class="w-full h-64 rounded"/>
@@ -61,10 +61,10 @@
             <h4 class="text-sm font-semibold" style="color:#fbc766">L'Education est une Puissance</h4>
         </div>
         <div class="mt-4 text-lg font-bold text-center text-gray-900 md:text-2xl">
-            <h2>Une Pédagogie adaptée pour votre réussite professionnelle</h2>
+            <h2>{{store.abouts[3]['titre']}}</h2>
         </div>
         <div class="">
-            <p class="text-center text-gray-700">Passez dès maintenant à l'action en vous inscrivant en toute simplicité et sans vous déplacer.</p>
+            <p class="text-center text-gray-700">{{store.abouts[3]['descrip']}}</p>
         </div>
         <div class="mt-8">
             <router-link to="/Inscription" class="p-3 font-medium text-center text-white bg-blue-700 rounded">Inscription</router-link>
@@ -80,28 +80,15 @@
             <h4 class="text-lg font-bold text-gray-900 md:text-2xl">Le Comité de Gestion</h4>
         </div>
 
-        <!-- Le trio -->
+        <!-- Comite de gestion  -->
         <div class="flex gap-4 mt-3">
-            <div class="mt-6 basis-1/3">
+            <!-- parcours avec vue js -->
+            <div class="flex flex-col items-center justify-center mt-6 text-center basis-1/3" v-for="comite in store.comites" :key="comite.id">
                 <div class="border rounded">
-                    <img src="img/etu2.jpg" alt="" srcset="" class="h-28 sm:h-40 md:h-60"/>
+                    <img :src="'/storage/comite/'+comite['id']+'.png'" alt="" srcset="" class="h-28 sm:h-40 md:h-60"/>
                 </div>
-                <h5 class="mt-2 text-sm font-medium text-center">Secrétaire Général Académique</h5>
-                <p class="text-sm text-center">Professeur en Chimie</p>
-            </div>
-            <div class="mt-6 basis-1/3">
-                <div class="border rounded">
-                    <img src="img/etu2.jpg" alt="" srcset="" class="h-28 sm:h-40 md:h-60"/>
-                </div>
-                <h5 class="mt-2 text-sm font-medium text-center">Directeur Général</h5>
-                <p class="text-sm text-center">Professeur en Chimie</p>
-            </div>
-            <div class="mt-6 basis-1/3">
-                <div class="border rounded">
-                    <img src="img/etu2.jpg" alt="" srcset="" class="h-28 sm:h-40 md:h-60"/>
-                </div>
-                <h5 class="mt-2 text-sm font-medium text-center">Secrétaire Général Administratif</h5>
-                <p class="text-sm text-center">Professeur en Chimie</p>
+                <h5 class="mt-2 text-sm font-medium text-center">{{comite['titre']}}</h5>
+                <p class="w-1/2 text-sm text-center"> {{comite['niveau']}} {{comite['noms']}}</p>
             </div>
         </div>
     </div>

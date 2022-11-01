@@ -10,10 +10,10 @@
         </div>
     </div>
 
-    <div class="px-4 mb-10 lg:px-32 sm:px-8 md:px-16 xl:px-40 2xl:px-80" v-for="actu in store.actus">
+    <div class="px-4 mb-10 lg:px-32 sm:px-8 md:px-16 xl:px-40 2xl:px-80">
         <!-- Actu content -->
         <div class="items-center justify-center gap-8 mt-10 sm:flex">
-            <div class="">
+            <div class="" v-for="actu in store.actus">
                 <div class="">
                     <img :src="'/storage/actualite/'+actu.id+'/0.png'" alt="" class="w-full h-64 rounded-md">
                 </div>

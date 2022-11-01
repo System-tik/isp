@@ -2,49 +2,47 @@
 
 namespace App\Http\Livewire\Admin;
 
+use App\Models\comite;
 use Livewire\Component;
-use App\Models\header;
 use Livewire\WithFileUploads;
 
-class VHeader extends Component
+class VComite extends Component
 {
     use WithFileUploads;
-    public $headers;
+    public $comites;
     public $titre;
-    public $sous;
-    public $descrip;
+    public $niveau;
+    public $noms;
     public $photo;
     public $selectedId;
 
     protected $messages = [
         'titre.required' => 'Veuillez saisir le titre.',
-        'sous.required' => 'Veuillez saisir le sous titre.',
-        'descrip.required' => 'Veuillez saisir la description.',
-        'selectedId' => 'Veuillez séléctionner une header.'
+        'niveau.required' => 'Veuillez saisir le niveau titre.',
+        'noms.required' => 'Veuillez saisir la nomstion.',
+        'selectedId' => 'Veuillez séléctionner une comite.'
     ];
-
 
     public function render()
     {
-        $this->headers = header::all();
-        return view('livewire.admin.v-header');
+        $this->comites = comite::all();
+        return view('livewire.admin.v-comite');
     }
-
     public function store()
     {
         $validate = $this->validate([
             'titre' => 'required',
-            'sous' => 'required',
-            'descrip' => 'required',
+            'niveau' => 'required',
+            'noms' => 'required',
 
         ]);
 
         try {
-            $record = header::create($validate);
-            $this->photo->storePubliclyAs('public/header/', $record->id.'.svg');
+            $record = comite::create($validate);
+            $this->photo->storePubliclyAs('public/comite/', $record->id.'.png');
             $this->clear();
-            $this->dispatchBrowserEvent('confirm', ['message' => 'header enregistrée!']);
-            $this->emit('header');
+            $this->dispatchBrowserEvent('confirm', ['message' => 'comite enregistrée!']);
+            $this->emit('comite');
         } catch (\Exception $th) {
             $this->dispatchBrowserEvent('echec',['message' => $th->getMessage()]);
         }
@@ -55,16 +53,16 @@ class VHeader extends Component
     public function clear()
     {
         $this->titre = "";
-        $this->sous = "";
-        $this->descrip = "";
+        $this->niveau = "";
+        $this->noms = "";
         $this->selectedId = "";
     }
 
     public function selectedId($donnees)
     {
         $this->titre = $donnees['titre'];
-        $this->sous = $donnees['sous'];
-        $this->descrip = $donnees['descrip'];
+        $this->niveau = $donnees['niveau'];
+        $this->noms = $donnees['noms'];
         $this->selectedId = $donnees['id'];
     }
 
@@ -72,20 +70,20 @@ class VHeader extends Component
     {
         $validate = $this->validate([
             'titre' => 'required',
-            'sous' => 'required',
-            'descrip' => 'required',
+            'niveau' => 'required',
+            'noms' => 'required',
             'selectedId' => 'required'
         ]);
 
         try {
-            $record = header::find($this->selectedId);
+            $record = comite::find($this->selectedId);
             $record->update($validate);
             $this->clear();
-            $this->dispatchBrowserEvent('confirm', ['message' => 'header enregistré!']);
-            $this->emit('header');
+            $this->dispatchBrowserEvent('confirm', ['message' => 'comite enregistré!']);
+            $this->emit('comite');
             if(!empty($this->photo)){
                 //dd("vide mon cher");
-                $this->photo->storePubliclyAs('public/header/', $this->selectedId.'.svg');
+                $this->photo->storePubliclyAs('public/comite/', $this->selectedId.'.png');
             }
         } catch (\Exception $th) {
             $this->dispatchBrowserEvent('echec',['message' => $th->getMessage()]);
@@ -98,11 +96,11 @@ class VHeader extends Component
     public function delete()
     {
         try {
-            $record = header::find($this->selectedId);
+            $record = comite::find($this->selectedId);
             $record->delete();
             $this->clear();
-            $this->dispatchBrowserEvent('confirm', ['message' => 'header enregistré!']);
-            $this->emit('header');
+            $this->dispatchBrowserEvent('confirm', ['message' => 'comite enregistré!']);
+            $this->emit('comite');
         } catch (\Exception $th) {
             $this->dispatchBrowserEvent('echec',['message' => $th->getMessage()]);
         }
@@ -110,4 +108,4 @@ class VHeader extends Component
         $this->clear();
     }
 }
-
+ 

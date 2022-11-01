@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Admin;
 
 use App\Models\frais;
 use App\Models\niveau;
+use App\Models\option;
 use Livewire\Component;
 
 
@@ -12,14 +13,17 @@ class VFrais extends Component
     /* public $type; */
     public $montant;
     public $niveaux;
+    public $options;
     public $niveau_id;
+    public $option_id;
     /* public $systemes; */
     public $fraiss;
 
     public function render()
     {
-        $this->fraiss=frais::join('niveaux', 'niveaux.id', '=', 'frais.niveau_id')->get('*');
+        $this->fraiss=frais::join('niveaux', 'niveaux.id', '=', 'frais.niveau_id')->join('options', 'options.id', '=', 'frais.option_id')->get('*');
         $this->niveaux=niveau::all();
+        $this->options=option::all();
         /* $this->systemes=niveau::all(); */
         return view('livewire.admin.v-frais');
     }
@@ -29,6 +33,7 @@ class VFrais extends Component
             /* 'type'=>'required', */
             'montant'=>'required',
             'niveau_id'=>'required',
+            'option_id'=>'required',
             /* 'system_id'=>'required' */
         ]);
         frais::create($record);
@@ -46,6 +51,7 @@ class VFrais extends Component
         /* $this->type=$data['type']; */
         $this->montant=$data['montant'];
         $this->niveau_id=$data['niveau_id'];
+        $this->option_id=$data['option_id'];
         /* $this->systemes=$data['system_id']; */
     }
     public function delete(){
@@ -53,6 +59,7 @@ class VFrais extends Component
             /* 'type'=>'required', */
             'montant'=>'required',
             'niveau_id'=>'required',
+            'option_id'=>'required',
             /* 'system_id'=>'required' */
         ]);
         $valide=frais::find($this->selectId);
@@ -63,6 +70,7 @@ class VFrais extends Component
             /* 'type'=>'required', */
             'montant'=>'required',
             'niveau_id'=>'required',
+            'option_id'=>'required',
             /* 'system_id'=>'required' */
         ]);
         $valide=frais::find($this->selectId);

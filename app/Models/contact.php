@@ -5,9 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class frais extends Model
+class contact extends Model
 {
-    protected $fillable=['montant', 'niveau_id','option_id'];
+    protected $fillable = ['type', 'contenu', 'icon'];
     use HasFactory;
 }
-

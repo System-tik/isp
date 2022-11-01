@@ -1,5 +1,5 @@
 <template>
-    <div class="button">
+    <div class="button h-80">
         <div class="flex flex-col items-center gap-3 px-5 py-10 cursor-pointer " >
             <div>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-blue-500">
@@ -11,14 +11,16 @@
                     {{nom}}
                 </h1>
             </div>
-            <div class="text-center text-gray-500 text-md w-full">
+            <div class="w-full text-center text-gray-500 text-md">
                 <p class="w-full text-center">
                     {{descrip}}
                 </p>
             </div>
             <div class="w-40 px-3 py-2 mt-2 text-center text-blue-600 rounded-md cursor-pointer bg-blue-50">
-                En savoir plus
+                <router-link to="/DetailOrientation" class="mt-2 text-sm font-bold hover:text-blue-600">En savoir plus &rarr;</router-link>
             </div>
+                                <router-link to="/DetailsActu" class="mt-2 text-sm font-bold hover:text-blue-600" @click="store.a = actu['id'];store.Top()">Lire la suite &rarr;</router-link>
+
         </div>
         <div class="button__horizontal"></div>
         <div class="button__vertical"></div>

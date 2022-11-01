@@ -174,7 +174,7 @@
                             <div class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
                                 <i class="relative top-0 text-sm leading-normal text-cyan-500 ni ni-app"></i>
                             </div>
-                            <span class="ml-1 duration-300 opacity-100 pointer-events-none ease">Inscription</span>
+                            <span class="ml-1 duration-300 opacity-100 pointer-events-none ease">Comité de gestion</span>
                         </a>
                     </li>
                     <li class="mt-0.5 w-full" @click="afficher(11)">
@@ -376,7 +376,7 @@
                     <livewire:admin.v-condition-ad>
                 </div>
                 <div x-show="menu[10]">
-                    <livewire:admin.v-inscription>
+                    <livewire:admin.v-comite>
                 </div>
                 <div x-show="menu[11]">
                     <livewire:admin.v-calendrier>

@@ -18,37 +18,37 @@
         </div>
 
         
-        <div>
+        <div class="py-10">
             <div class="py-8 text-gray-600 text-md sm:text-xl">
                 1. INFORMATIQUE ET TECHNOLOGIE
             </div>
             <div class="flex flex-col gap-1 ">
-                <div class="grid grid-cols-12 px-5 py-2 " style="background-color:#f4f6ff;">
-                    <div class="col-span-6 text-xs text-gray-600 sm:text-lg">
-                        CYCLE
-                    </div>
-                    <div class="hidden col-span-6 text-xs text-gray-600 xl:grid sm:text-lg">
-                        PROMOTION 
-                    </div>
-                    <div class="grid col-span-6 text-xs text-gray-600 xl:hidden sm:text-lg">
-                        LICENCE (LMD)
-                    </div>
+                <div class="grid grid-cols-4 px-5 py-2 " style="background-color:#f4f6ff;">
+                    <span class="p-1 font-bold text-center border cursor-pointer decoration-inherit hover:text-blue-600">PREMIERE LICENCE (L1)</span>
+                    <span class="p-1 font-bold text-center border cursor-pointer decoration-inherit hover:text-blue-600">DEUXIEME LICENCE (L2)</span>
+                    <span class="p-1 font-bold text-center border cursor-pointer decoration-inherit hover:text-blue-600">TROISIEME LICENCE(L3)</span>
+                    <span class="p-1 font-bold text-center border cursor-pointer decoration-inherit hover:text-blue-600">QUATRIEME LICENCE (L4)</span>
                 </div>
-                <div class="grid grid-cols-12 px-5 py-2 xl:hidden " style="background-color:#f4f6ff;">
-                    <div class="flex justify-center col-span-12 text-xs text-gray-600 sm:text-lg">
-                        PROMOTION 
-                    </div>
-                </div>
-                <div class="grid grid-cols-12 px-5 py-2 " style="background-color:#f4f6ff;">
-                    <div class="hidden col-span-6 text-xs text-gray-600 xl:grid sm:text-lg">
-                        LICENCE (LMD)
-                    </div>
-                    <div class="flex col-span-12 gap-4 text-xs text-gray-600 xl:col-span-6 sm:text-lg">
-                        <span class="font-bold decoration-inherit">PREMIERE LICENCE (L1)</span>
-                        <span class="font-bold decoration-inherit">DEUXIEME LICENCE (L2)</span>
-                        <span class="font-bold decoration-inherit">TROISIEME LICENCE(L3)</span>
-                        <span class="font-bold decoration-inherit">QUATRIEME LICENCE (L4)</span>
-                    </div>
+                <div class="p-2 mt-3 shadow-xl">
+                    <table class="table w-full text-lg">
+                        <thead>
+                            <tr class="text-left border-t border-b">
+                                <th class="px-2 border-r">Cours / UE</th>
+                                <th class="px-2 border-r">Description</th>
+                                <th class="px-2 border-r">Nombre de crédit</th>
+                                <th class="px-2">Semestre</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- C'est ici que tu dois placer ta boucle -->
+                            <tr class="border-b">
+                                <td class="px-2">Informatique et bureautique</td>
+                                <td class="px-2"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem inventore nesciunt.</p></td>
+                                <td class="px-2">6</td>
+                                <td class="px-2"> S1</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
