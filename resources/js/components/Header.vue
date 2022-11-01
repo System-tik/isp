@@ -86,7 +86,7 @@
         },
         data(){
             return {
-                store
+                store,
             }
         },
        
