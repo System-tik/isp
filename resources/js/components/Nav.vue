@@ -6,35 +6,42 @@
             </a>   
         </div>
         <div class="md:hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8" @click="voir=true">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
             <transition name="custom-classes"
             enter-active-class="animate__animated animate__fadeInLeft"
             leave-active-class="animate__animated animate__slideOutRight">
 
-                <div class="fixed top-0 left-0 w-screen h-screen bg-gray-900 ">
+                <div class="fixed top-0 left-0 w-screen h-screen bg-gray-900" v-if="voir">
                     <div class="flex items-center justify-end px-2 text-2xl text-white border-b">
-                        <span class="animate__animated animate__rotateIn">X</span>
+                        <span class="cursor-pointer animate__animated animate__rotateIn" @click="voir=false">X</span>
                     </div>
     
+<<<<<<< HEAD
                     <div class="flex flex-col gap-1 text-xl text-gray-300 ">
                         <div class="px-5 py-2 border-b border-gray-800">
+=======
+                    <div class=" flex flex-col gap-1 text-xl text-gray-300">
+                        <div class="px-5 py-2 border-b border-gray-800" @click="voir=false">
+>>>>>>> 207804ffaec3cf7d26b4446d6b32a9c5ad7df5c8
                             <router-link  to="/">Accueil</router-link>
                         </div>
-                        <div class="px-5 py-2 border-b border-gray-800">
+                        <div class="px-5 py-2 border-b border-gray-800" @click="voir=false">
                             <router-link to="/about">Apropos de l'ISP</router-link>
                         </div>
     
     
                         <div class="px-5 py-2 border-b border-gray-800">
-                            <p>Inscription</p>
+                            <div @click="etat=!etat">
+                                <p>Inscription</p>
+                            </div>
                             <transition name="custom-classes"
                             enter-active-class="animate__animated animate__fadeInLeft"
                             leave-active-class="animate__animated animate__bounceOutRight">
 
-                                <div class="">
-                                    <div class="flex flex-col gap-2 text-base">
+                                <div class="" v-if="etat">
+                                    <div class="flex flex-col gap-2 text-base" @click="voir=false">
                                         <router-link to="/inscription" class="">Admission</router-link>
                                         <router-link to="/frais" class="">Frais</router-link>
                                         <router-link to="/programme" class="">Programme de cours</router-link>
@@ -43,11 +50,11 @@
                                 
                             </transition>
                         </div> 
-                        <div class="px-5 py-2 border-b border-gray-800">
+                        <div class="px-5 py-2 border-b border-gray-800" @click="voir = false">
                             <router-link to="/actualite">Actualite</router-link>
                         </div>
                         
-                        <div class="px-5 py-2 text-white bg-blue-700 rounded-sm md:ml-10 lg:ml-16 xl:ml-20">
+                        <div class="px-5 py-2 text-white bg-blue-700 rounded-sm md:ml-10 lg:ml-16 xl:ml-20" @click="voir =false">
                             <router-link to="/contact">CONTACT</router-link>
                         </div>
                         <!-- <div>
@@ -118,7 +125,9 @@ import { store } from '../state/store.js'
 export default {
     data(){
             return {
-                store
+                store,
+                voir :false,
+                etat : false
             }
         }
 }

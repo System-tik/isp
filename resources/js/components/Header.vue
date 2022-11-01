@@ -59,7 +59,7 @@
         },
         data(){
             return {
-                store
+                store,
             }
         },
        
