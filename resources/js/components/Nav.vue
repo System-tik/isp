@@ -18,13 +18,8 @@
                         <span class="cursor-pointer animate__animated animate__rotateIn" @click="voir=false">X</span>
                     </div>
     
-<<<<<<< HEAD
-                    <div class="flex flex-col gap-1 text-xl text-gray-300 ">
-                        <div class="px-5 py-2 border-b border-gray-800">
-=======
                     <div class=" flex flex-col gap-1 text-xl text-gray-300">
                         <div class="px-5 py-2 border-b border-gray-800" @click="voir=false">
->>>>>>> 207804ffaec3cf7d26b4446d6b32a9c5ad7df5c8
                             <router-link  to="/">Accueil</router-link>
                         </div>
                         <div class="px-5 py-2 border-b border-gray-800" @click="voir=false">
