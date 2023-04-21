@@ -3,10 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="/img/isp logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/isplogo.png" type="image/x-icon">
     <title>{{ config('app.name') }}</title>
-    @vite('resources/css/app.css')
-    @vite('resources/js/app.js')
+
+    <link rel="stylesheet" href="{{ asset('build/assets/app.0d36ec97.css')}}">
+    <link rel="stylesheet" href="{{ asset('build/assets/app.b2f340a8.css')}}">
+    
+
     <link rel="stylesheet" href="{{asset('css/animate.min.css')}}">
     <link rel="stylesheet" href="{{asset('aos/dist/aos.css')}}">    
     <link rel="stylesheet" href="{{asset('css/card.anime.css')}}">
@@ -33,6 +36,8 @@
       
       
     @livewireScripts()
+    <script src="{{asset('build/assets/app.9cb818dc.js')}}"></script>
+    
     <script src="{{asset('aos/dist/aos.js')}}"></script>
     <script>
       /* let a = AOS.init()

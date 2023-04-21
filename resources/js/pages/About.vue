@@ -50,7 +50,7 @@
             </div> -->
         </div>
         <div class="flex items-center justify-center basis-1/2">
-            <img src="img/deux.jpg" alt="" class="w-full h-64 rounded"/>
+            <img src="/img/deux.jpg" alt="" class="w-full h-64 rounded"/>
         </div>
     </div>
 
