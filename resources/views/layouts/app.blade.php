@@ -29,7 +29,7 @@
         <!-- Scripts -->
         <link rel="stylesheet" href="{{ asset('build/assets/app.0d36ec97.css')}}">
         <link rel="stylesheet" href="{{ asset('build/assets/app.app.b2f340a8.css')}}">
-        <script src="{{asset('build/assets/app.9cb818dc.js')}}"></script>
+        
         @livewireStyles
     </head>
     <body class="m-0 font-sans text-base antialiased font-normal dark:bg-slate-900 leading-default bg-gray-50 text-slate-500" 
@@ -462,6 +462,7 @@
         </div>
         @livewireScripts
     </body>
+    <script src="{{asset('build/assets/app.9cb818dc.js')}}"></script>
     <!-- plugin for charts  -->
     <script src="{{asset('dash/assets/js/plugins/chartjs.min.js')}}" async></script>
     <!-- plugin for scrollbar  -->

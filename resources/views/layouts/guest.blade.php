@@ -11,11 +11,14 @@
         <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
 
         <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <link rel="stylesheet" href="{{ asset('build/assets/app.0d36ec97.css')}}">
+        <link rel="stylesheet" href="{{ asset('build/assets/app.app.b2f340a8.css')}}">
+        <script src="{{asset('build/assets/app.9cb818dc.js')}}"></script>
     </head>
     <body>
         <div class="font-sans text-gray-900 antialiased">
             {{ $slot }}
         </div>
+        <script src="{{asset('build/assets/app.9cb818dc.js')}}"></script>
     </body>
 </html>
